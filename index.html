@@ -32,18 +32,15 @@ body {
     overflow-x: hidden;
 }
 
-/* Modern smooth scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Utilities */
 .wrap {
     width: min(var(--max), calc(100% - 40px));
     margin: auto;
 }
 
-/* Modern Navigation */
 nav {
     position: sticky;
     top: 0;
@@ -54,12 +51,11 @@ nav {
 }
 
 .navin {
-    height: (--);
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    height: 80px;
 }
 
 .brand {
@@ -76,7 +72,6 @@ nav {
     margin-left: 5px;
 }
 
-/* Links */
 .links {
     display: flex;
     gap: 28px;
@@ -93,7 +88,6 @@ nav {
     color: var(--ink);
 }
 
-/* Buttons - Enhanced */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -104,7 +98,6 @@ nav {
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid transparent;
-    font-size:54rem;
 }
 
 .btn:hover {
@@ -124,7 +117,6 @@ nav {
     border-color: var(--dark);
 }
 
-/* Hero - Stunning Modern Version */
 .hero {
     padding: 110px 0 100px;
     display: grid;
@@ -162,7 +154,6 @@ h1 {
     margin-top: 40px;
 }
 
-/* Trust row */
 .trustrow {
     display: flex;
     align-items: center;
@@ -201,7 +192,6 @@ h1 {
     max-width: 240px;
 }
 
-/* Visual preview */
 .visualwrap {
     position: relative;
 }
@@ -357,7 +347,6 @@ h1 {
     margin-top: 4px;
 }
 
-/* Sections - Enhanced */
 section {
     padding: 100px 0;
 }
@@ -383,7 +372,6 @@ section {
     font-size: 1.05rem;
 }
 
-/* Proof cards */
 .proof {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -418,7 +406,6 @@ section {
     line-height: 1.6;
 }
 
-/* Work grid */
 .workgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -514,7 +501,6 @@ section {
     font-weight: 700;
 }
 
-/* Offer section */
 .offer {
     background: var(--accent);
     border-radius: 36px;
@@ -546,7 +532,6 @@ section {
     font-weight: 700;
 }
 
-/* Plans */
 .plans {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -653,7 +638,6 @@ section {
     margin-top: auto;
 }
 
-/* Contact grid */
 .contactgrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -708,7 +692,6 @@ section {
     word-break: break-word;
 }
 
-/* Steps */
 .steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -744,7 +727,6 @@ section {
     line-height: 1.6;
 }
 
-/* CTA */
 .cta {
     background: var(--dark);
     color: #fff;
@@ -769,7 +751,6 @@ section {
     line-height: 1.7;
 }
 
-/* Footer */
 footer {
     padding: 40px 0 60px;
     color: #6c7168;
@@ -779,7 +760,6 @@ footer {
     gap: 20px;
 }
 
-/* ------------------- ADMIN PANEL (HIDDEN) ------------------- */
 #adminOverlay {
     display: none;
     position: fixed;
@@ -885,7 +865,6 @@ footer {
     box-shadow: 0 10px 25px rgba(168, 255, 50, 0.4);
 }
 
-/* Admin trigger */
 #secretTrigger {
     position: fixed;
     bottom: 24px;
@@ -911,7 +890,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Responsive */
 @media (max-width: 1100px) {
     .workgrid,
     .plans {
@@ -1012,7 +990,7 @@ footer {
 
 <main>
     <!-- HERO SECTION -->
-    <section class="hero wrap">
+    <section id="home" class="hero wrap">
         <div>
             <div class="kicker">Portfolio & business websites</div>
             <h1>Your work deserves a better first impression.</h1>
@@ -1077,7 +1055,7 @@ footer {
     </section>
 
     <!-- PROOF SECTION -->
-    <section class="wrap">
+    <section id="proof" class="wrap">
         <div class="sectionhead">
             <h2>Not just a website.<br>A digital first impression.</h2>
             <p>We combine content, structure and visual design so your work feels clear, credible and easy to remember.</p>
@@ -1308,7 +1286,7 @@ footer {
     </section>
 
     <!-- OFFER SECTION -->
-    <section class="wrap">
+    <section id="offer" class="wrap">
         <div class="offer">
             <div>
                 <h2>Don't hide your work.<br>Present it.</h2>
@@ -1476,12 +1454,11 @@ footer {
 
 <script>
 // ==================== ADMIN SYSTEM ====================
-const ADMIN_PASSWORD = "forge2026";  // You can change this
+const ADMIN_PASSWORD = "forge2026";
 let allProjects = [];
 let adminActive = false;
 let currentTab = 'pricing';
 
-// Load saved data
 function loadSavedData() {
     const savedData = localStorage.getItem("forgeAdminData");
     if (savedData) {
@@ -1503,7 +1480,6 @@ function loadSavedData() {
     }
 }
 
-// Show admin panel with password prompt
 function openAdminPanel() {
     const pass = prompt("Enter Admin Password:");
     if (pass === ADMIN_PASSWORD) {
@@ -1521,7 +1497,6 @@ function hideAdmin() {
     adminActive = false;
 }
 
-// Tab switching
 function showTab(tabName) {
     currentTab = tabName;
     document.querySelectorAll('.editor-form').forEach(el => el.style.display = 'none');
@@ -1531,7 +1506,6 @@ function showTab(tabName) {
     document.querySelector(`.tab[onclick*="${tabName}"]`).classList.add('active');
 }
 
-// Save pricing
 function savePricing() {
     const prices = {
         basic: document.getElementById('priceBasic').value,
@@ -1547,8 +1521,6 @@ function savePricing() {
     localStorage.setItem("forgeAdminData", JSON.stringify(data));
     
     alert("✅ Pricing saved! Refresh page to see changes on website.");
-    
-    // Actually update the page elements dynamically
     updatePricingOnPage(prices);
 }
 
@@ -1566,12 +1538,10 @@ function updatePricingOnPage(prices) {
     if (priceElements.pro) priceElements.pro.textContent = prices.pro;
     if (priceElements.brand) priceElements.brand.textContent = prices.brand;
     
-    // Update buttons
     document.querySelector('.btn.lime[href="#portfolios"]').textContent = `Get a portfolio — ${prices.basic}`;
     document.querySelector('.btn.lime[href="#contact"]').textContent = `Start with ${prices.basic} →`;
 }
 
-// Add project
 function addProject() {
     const title = document.getElementById('projTitle').value.trim();
     const category = document.getElementById('projCategory').value.trim();
@@ -1649,7 +1619,6 @@ function clearProjectForm() {
     document.getElementById('projUrl').value = '';
 }
 
-// Save contact info
 function saveContact() {
     const contactData = {
         whatsapp: document.getElementById('whatsappNum').value,
@@ -1665,40 +1634,30 @@ function saveContact() {
     alert("✅ Contact info saved!");
 }
 
-// Update password
 function updatePassword() {
     const newPass = prompt("Enter new admin password:");
     if (newPass && newPass.length >= 4) {
-        // In a real app, you'd hash this
         alert("Password updated! The new password will work after page refresh.");
-        // Note: you'd need to update ADMIN_PASSWORD variable
     } else if (newPass !== null) {
         alert("Password must be at least 4 characters.");
     }
 }
 
-// Keyboard shortcut to open admin
 document.addEventListener('keydown', function(e) {
     if (e.altKey && e.shiftKey && e.key.toLowerCase() === 'a') {
         e.preventDefault();
         openAdminPanel();
     }
     
-    // Close with Escape
     if (e.key === 'Escape' && adminActive) {
         hideAdmin();
     }
 });
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-    // Click admin trigger
     document.getElementById('secretTrigger').addEventListener('click', openAdminPanel);
-    
-    // Initialize password display
     document.getElementById('currentPassShow').textContent = ADMIN_PASSWORD;
 });
-
 </script>
 </body>
 </html>
