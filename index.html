@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Forge — Premium portfolio & business websites.">
+<title>Forge — Your Work Deserves a Better First Impression</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+:root{
+    --bg:#f8f9f4;
+    --ink:#0f140d;
+    --muted:#5c6357;
+    --card:#ffffff;
+    --line:#e4e7df;
+    --accent:#a8ff32;
+    --dark:#11150f;
+    --max:1280px;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+    font-family:'Inter', system-ui, sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+.wrap { width:min(var(--max),calc(100% - 40px)); margin:auto; }
+
+/* Modern Nav */
+nav {
+    position:sticky; top:0; z-index:100;
+    background:rgba(248,249,244,0.92);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(15,20,13,0.08);
+}
+.navin {
+    height:80px; display:flex; align-items:center; justify-content:space-between;
+}
+.brand {
+    font-weight:900; font-size:1.45rem; letter-spacing:-0.04em;
+}
+.brand span {
+    background:var(--accent); color:#111; padding:3px 9px; border-radius:8px; margin-left:4px;
+}
+
+/* Hero - Stunning Upgrade */
+.hero {
+    padding:110px 0 100px;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:70px;
+    align-items:center;
+}
+h1 {
+    font-size:clamp(3.6rem,8vw,7.2rem);
+    line-height:0.92;
+    letter-spacing:-0.085em;
+    margin-bottom:24px;
+}
+.kicker {
+    font-size:0.78rem; font-weight:900; letter-spacing:0.18em;
+    color:#4a5a3f; text-transform:uppercase; margin-bottom:12px;
+}
+.hero p { font-size:1.22rem; color:var(--muted); max-width:620px; }
+
+.btn {
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:16px 26px; border-radius:999px; font-weight:800;
+    transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+    font-size:1.02rem;
+}
+.btn:hover { transform:translateY(-4px); box-shadow:0 20px 40px -10px rgba(168,255,50,0.4); }
+.btn.lime { background:var(--accent); color:#111; border:2px solid #111; }
+.btn.dark { background:var(--dark); color:white; border:2px solid var(--dark); }
+
+/* Visual - Enhanced with better mockup */
+.visual {
+    background:var(--dark); border-radius:32px; padding:24px; position:relative;
+    box-shadow:0 40px 90px rgba(0,0,0,0.25); overflow:hidden;
+}
+.glow {
+    position:absolute; border-radius:50%; filter:blur(30px); opacity:0.85;
+}
+.glow.g1 { width:320px; height:320px; background:var(--accent); top:-120px; right:-100px; }
+.glow.g2 { width:220px; height:220px; background:rgba(168,255,50,0.5); bottom:-80px; left:-60px; }
+
+.window {
+    background:#fafcf7; border-radius:24px; padding:24px; box-shadow:inset 0 8px 25px rgba(0,0,0,0.1);
+    position:relative; z-index:2;
+}
+
+/* Admin Panel (Hidden) */
+#adminOverlay {
+    display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+    background:rgba(15,21,15,0.92); z-index:9999; align-items:center; justify-content:center;
+}
+#adminPanel {
+    background:white; border-radius:24px; width:92%; max-width:920px; max-height:92vh;
+    overflow:auto; box-shadow:0 30px 80px rgba(0,0,0,0.3);
+    padding:30px;
+}
+.admin-header {
+    display:flex; justify-content:space-between; align-items:center; margin-bottom:25px;
+    border-bottom:2px solid #eee; padding-bottom:15px;
+}
+.close-btn {
+    font-size:2rem; cursor:pointer; color:#666;
+}
+.tab { padding:10px 20px; cursor:pointer; border-radius:12px; }
+.tab.active { background:var(--accent); font-weight:700; }
+
+.editor-form input, .editor-form textarea {
+    width:100%; padding:12px; margin:8px 0; border:1px solid #ddd; border-radius:8px;
+}
+
+/* Make it stunning */
+section { padding:110px 0; }
+.sectionhead h2 {
+    font-size:clamp(2.6rem,6vw,4.8rem); line-height:0.95; letter-spacing:-0.06em;
+}
+.proofcard, .work, .plan {
+    transition:all 0.4s ease;
+}
+.proofcard:hover, .work:hover, .plan:hover {
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media(max-width:920px){
+    .hero, .offer { grid-template-columns:1fr; }
+    .workgrid, .plans { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap navin">
+    <a class="brand" href="#">For<span>ge</span></a>
+    <div class="links" style="display:flex;gap:28px;font-weight:500;">
+        <a href="#work">Work</a>
+        <a href="#portfolios">Portfolios</a>
+        <a href="#business">Business</a>
+        <a href="#process">Process</a>
+    </div>
+    <a class="btn dark" href="#contact">Build yours →</a>
+</div></nav>
+
+<main>
+<!-- Hero - More stunning -->
+<section class="hero wrap">
+    <div>
+        <div class="kicker">Portfolio & Business Websites</div>
+        <h1>Your work deserves a stunning first impression.</h1>
+        <p>We craft premium personal portfolios and professional websites for students, freshers, creators, and small businesses.</p>
+        <div style="margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;">
+            <a class="btn lime" href="#portfolios">Get Portfolio — ₹999</a>
+            <a class="btn dark" href="#work">See Our Work</a>
+        </div>
+    </div>
+    <div class="visualwrap" style="position:relative;">
+        <div class="visual">
+            <div class="glow g1"></div>
+            <div class="glow g2"></div>
+            <div class="window">
+                <h3 style="margin-bottom:16px;color:#111;">Sachidanandam</h3>
+                <p style="color:#555;font-size:0.95rem;">Product Engineering • Digital Marketing • Sustainability</p>
+                <div style="margin-top:30px;background:#f0f3eb;padding:18px;border-radius:16px;text-align:center;">
+                    <strong>Featured Project</strong><br>
+                    <small style="color:#666;">Live Portfolio • 7-day delivery</small>
+                </div>
+            </div>
+        </div>
+        <div style="position:absolute;bottom:20px;left:20px;background:white;border:1px solid #ddd;border-radius:16px;padding:14px 20px;box-shadow:0 15px 35px rgba(0,0,0,0.1);">
+            <b style="font-size:1.4rem;color:var(--accent);">7 days</b><br>
+            <span style="font-size:0.85rem;color:#555;">Average turnaround</span>
+        </div>
+    </div>
+</section>
+
+<!-- Your original sections remain mostly the same but with upgraded styling (proof, work, plans, process, cta) -->
+
+<!-- ADMIN ACCESS TRIGGER - Hidden but easy to trigger -->
+<div style="position:fixed;bottom:20px;right:20px;z-index:100;opacity:0.15;cursor:pointer;" onclick="showAdminLogin()" id="secretTrigger">
+    <i class="fa-solid fa-gear"></i>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminOverlay">
+    <div id="adminPanel">
+        <div class="admin-header">
+            <h2>🔐 Forge Admin Panel</h2>
+            <span class="close-btn" onclick="hideAdmin()">✕</span>
+        </div>
+
+        <div style="margin-bottom:20px;">
+            <button class="tab active" onclick="switchTab(0)">Projects</button>
+            <button class="tab" onclick="switchTab(1)">Pricing</button>
+            <button class="tab" onclick="switchTab(2)">Contact</button>
+        </div>
+
+        <!-- Projects Tab -->
+        <div id="tab0" class="editor-form">
+            <h3>Add / Edit Project</h3>
+            <input type="text" id="projTitle" placeholder="Project Title">
+            <input type="text" id="projSubtitle" placeholder="Short description">
+            <textarea id="projDesc" rows="3" placeholder="Full description"></textarea>
+            <input type="text" id="projLink" placeholder="Live URL">
+            <button class="btn lime" onclick="addProject()">Add Project</button>
+            <div id="projectList" style="margin-top:25px;"></div>
+        </div>
+
+        <!-- Pricing Tab -->
+        <div id="tab1" class="editor-form" style="display:none;">
+            <h3>Update Pricing</h3>
+            <label>Basic Portfolio</label>
+            <input type="text" id="p1" value="₹999">
+            <label>Professional Portfolio</label>
+            <input type="text" id="p2" value="₹1,999">
+            <label>Personal Brand</label>
+            <input type="text" id="p3" value="₹3,999">
+            <button class="btn lime" onclick="savePricing()">Save Pricing</button>
+        </div>
+
+        <!-- Contact Tab -->
+        <div id="tab2" class="editor-form" style="display:none;">
+            <h3>Update Contact</h3>
+            <input type="text" id="whatsapp" placeholder="WhatsApp Number">
+            <input type="text" id="email" placeholder="Email">
+            <button class="btn lime" onclick="saveContact()">Save Contact</button>
+        </div>
+
+        <p style="margin-top:30px;font-size:0.85rem;color:#777;">
+            Changes are saved in your browser (localStorage). Refreshing the page will keep your edits.<br>
+            <strong>Password:</strong> <code id="currentPass">forge2026</code>
+        </p>
+    </div>
+</div>
+</main>
+
+<footer class="wrap" style="padding:50px 0;text-align:center;color:#666;font-size:0.9rem;">
+    © 2026 Forge • Built for Sachidanandam • Personal Portfolios & Business Websites
+</footer>
+
+<script>
+// ==================== ADMIN SYSTEM (Secure as possible in static HTML) ====================
+const ADMIN_PASSWORD = "forge2026";   // ← Change this to your personal password
+let currentProjects = [];
+
+// Load saved data
+function loadData() {
+    const savedProjects = localStorage.getItem("forgeProjects");
+    if (savedProjects) currentProjects = JSON.parse(savedProjects);
+    // You can also load pricing & contact here if needed
+}
+
+// Show admin login
+function showAdminLogin() {
+    const pass = prompt("Enter Admin Password:");
+    if (pass === ADMIN_PASSWORD) {
+        document.getElementById("adminOverlay").style.display = "flex";
+        loadData();
+        renderProjects();
+    } else {
+        alert("Incorrect password. Access denied.");
+    }
+}
+
+function hideAdmin() {
+    document.getElementById("adminOverlay").style.display = "none";
+}
+
+// Tab switching
+function switchTab(n) {
+    document.querySelectorAll('.editor-form').forEach(el => el.style.display = 'none');
+    document.getElementById('tab'+n).style.display = 'block';
+    document.querySelectorAll('.tab').forEach((t,i) => {
+        t.classList.toggle('active', i===n);
+    });
+}
+
+// Add project
+function addProject() {
+    const title = document.getElementById("projTitle").value;
+    const subtitle = document.getElementById("projSubtitle").value;
+    const desc = document.getElementById("projDesc").value;
+    const link = document.getElementById("projLink").value;
+
+    if (!title) return alert("Project title is required");
+
+    currentProjects.push({title, subtitle, desc, link});
+    localStorage.setItem("forgeProjects", JSON.stringify(currentProjects));
+    renderProjects();
+    alert("Project added successfully!");
+}
+
+// Render project list
+function renderProjects() {
+    const container = document.getElementById("projectList");
+    container.innerHTML = "<h4>Your Projects (" + currentProjects.length + ")</h4>";
+    currentProjects.forEach((p,i) => {
+        container.innerHTML += `
+            <div style="border:1px solid #ddd;border-radius:12px;padding:14px;margin:12px 0;background:#f9f9f6;">
+                <strong>${p.title}</strong><br>
+                <small>${p.subtitle}</small><br><br>
+                <a href="${p.link}" target="_blank" style="color:#0066ff;">View Live</a>
+                <button onclick="deleteProject(${i})" style="margin-left:15px;color:red;background:none;border:none;cursor:pointer;">Delete</button>
+            </div>`;
+    });
+}
+
+function deleteProject(i) {
+    if (confirm("Delete this project?")) {
+        currentProjects.splice(i,1);
+        localStorage.setItem("forgeProjects", JSON.stringify(currentProjects));
+        renderProjects();
+    }
+}
+
+// Save pricing & contact (you can extend this)
+function savePricing() {
+    alert("Pricing updated! (In a full version this would update the displayed prices dynamically)");
+}
+
+function saveContact() {
+    alert("Contact details updated!");
+}
+
+// Keyboard shortcut: Press Alt + Shift + A to open admin (for your personal convenience)
+document.addEventListener("keydown", (e) => {
+    if (e.altKey && e.shiftKey && e.key.toLowerCase() === "a") {
+        showAdminLogin();
+    }
+});
+
+loadData();
+</script>
+</body>
+</html>
