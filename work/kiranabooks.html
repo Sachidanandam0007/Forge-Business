@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KiranaBooks – App concept by Forge</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14123a;--pn:#1d1b4b;--pn2:#262364;--ink:#f4f3ff;--mute:#a6a3d6;--yl:#ffd23f;--gr:#3ddc97;--rd:#ff6b6b;--ln:#ffffff1a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.45 "Space Grotesk",system-ui,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.fb{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;font-size:14px}.fb a{font-weight:700}.fb span{color:var(--mute)}
+.head{max-width:1240px;margin:6px auto 26px;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.head h1{font-size:clamp(34px,4.6vw,60px);line-height:1;letter-spacing:-.04em}
+.head h1 span{color:var(--yl)}
+.head p{max-width:430px;color:var(--mute)}
+.app{max-width:1240px;margin:0 auto 60px;padding:0 24px;display:grid;grid-template-columns:1fr 360px 300px;gap:16px}
+.pn{background:var(--pn);border:1px solid var(--ln);border-radius:24px;padding:18px}
+.pt{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.pt h2{font-size:17px;letter-spacing:-.02em}.pt span{font-size:12.5px;color:var(--mute)}
+.srch{width:100%;background:var(--pn2);border:1px solid var(--ln);border-radius:14px;padding:12px 14px;color:var(--ink);font:inherit;font-size:16px;margin-bottom:12px}
+.srch:focus{outline:none;border-color:var(--yl)}
+.prods{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.pd{background:var(--pn2);border:1px solid var(--ln);border-radius:18px;padding:12px;text-align:left;position:relative;transition:transform .15s,border-color .2s}
+.pd:hover{border-color:var(--yl)}.pd:active{transform:scale(.96)}
+.pd .e{font-size:28px}.pd b{display:block;font-size:14px;margin-top:6px;line-height:1.2}
+.pd span{font-size:13px;color:var(--yl);font-weight:700}
+.pd small{position:absolute;top:10px;right:10px;font-size:11px;padding:2px 8px;border-radius:99px;background:#ffffff14;color:var(--mute)}
+.pd small.low{background:#ff6b6b26;color:var(--rd)}
+.pd.out{opacity:.4;pointer-events:none}
+.bill{display:flex;flex-direction:column}
+.bl{flex:1;min-height:220px;max-height:360px;overflow-y:auto}
+.br{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--ln)}
+.br b{flex:1;font-size:14px}.br span{font-size:14px;font-variant-numeric:tabular-nums;min-width:56px;text-align:right}
+.br .q{display:flex;align-items:center;gap:6px;background:var(--pn2);border-radius:10px;padding:2px}
+.br .q button{width:26px;height:26px;border-radius:8px;font-size:16px}
+.empty{color:var(--mute);text-align:center;padding:60px 0;font-size:14px}
+.tot{border-top:1px solid var(--ln);padding-top:12px;margin-top:8px}
+.tot div{display:flex;justify-content:space-between;font-size:14px;color:var(--mute);padding:3px 0}
+.tot .g{color:var(--ink);font-size:26px;font-weight:700;letter-spacing:-.03em}
+.pay{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.pay button{border-radius:14px;padding:13px 4px;font-weight:700;font-size:14px;background:var(--pn2);border:1px solid var(--ln)}
+.pay button:first-child{background:var(--gr);color:#0a2a1c;border-color:var(--gr)}
+.pay button:nth-child(2){background:var(--yl);color:#2a2100;border-color:var(--yl)}
+.pay button:disabled{opacity:.35;cursor:default}
+.cust{width:100%;margin-top:8px;background:var(--pn2);border:1px solid var(--ln);border-radius:12px;padding:10px 12px;color:var(--ink);font:inherit;font-size:15px}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.kpi div{background:var(--pn2);border-radius:16px;padding:12px}
+.kpi small{font-size:11.5px;color:var(--mute);text-transform:uppercase;letter-spacing:.08em}
+.kpi b{display:block;font-size:22px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.chart{display:flex;align-items:flex-end;gap:6px;height:90px;margin:6px 0 16px;padding-bottom:18px;position:relative}
+.chart i{flex:1;background:linear-gradient(180deg,var(--yl),#ffb100);border-radius:6px 6px 2px 2px;position:relative;min-height:4px;transition:height .5s}
+.chart i:after{content:attr(data-h);position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--mute);font-style:normal}
+.alert{font-size:13px;padding:9px 12px;border-radius:12px;background:#ff6b6b1f;color:#ffb3b3;margin-bottom:8px;display:flex;gap:8px}
+.udh{font-size:13.5px}.udh div{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--ln)}
+.udh b{color:var(--yl)}
+.wa{margin-top:14px;width:100%;background:#25d366;color:#05301a;font-weight:700;border-radius:14px;padding:12px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:14px 20px;border-radius:16px;font-weight:700;transition:transform .4s cubic-bezier(.2,.8,.2,1);z-index:9;max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0)}
+.msg{display:none;margin-top:14px;background:#0b141a;border-radius:16px;padding:12px;font-size:13px}
+.msg.on{display:block}
+.msg div{background:#005c4b;border-radius:12px 12px 2px 12px;padding:10px 12px;white-space:pre-line;color:#e9fdf6}
+@media(max-width:1100px){.app{grid-template-columns:1fr 1fr}.side{grid-column:1/-1}}
+@media(max-width:700px){.app{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="fb"><a href="../index.html#work">← Back to Forge</a><span>App concept · interactive prototype</span></div>
+<div class="head">
+  <h1>Billing in seconds.<br><span>Stock that counts itself.</span></h1>
+  <p>KiranaBooks is a concept billing and inventory app for local stores. Tap products to bill, take payment by cash, UPI or <i>udhaar</i> (credit), and watch stock and sales update live. <b>Try it:</b> make a few bills.</p>
+</div>
+<div class="app">
+  <div class="pn">
+    <div class="pt"><h2>Products</h2><span>Tap to add · stock in badge</span></div>
+    <input class="srch" id="srch" placeholder="Search: atta, milk, soap…">
+    <div class="prods" id="prods"></div>
+  </div>
+  <div class="pn bill">
+    <div class="pt"><h2>Bill #<span id="bno">1042</span></h2><span id="time"></span></div>
+    <div class="bl" id="bl"></div>
+    <div class="tot"><div><span>Items</span><span id="ti">0</span></div><div class="g"><span>Total</span><span id="tt">₹0</span></div></div>
+    <input class="cust" id="cust" placeholder="Customer name (for udhaar)" value="Sharma ji">
+    <div class="pay"><button data-pay="Cash" disabled>Cash</button><button data-pay="UPI" disabled>UPI</button><button data-pay="Udhaar" disabled>Udhaar</button></div>
+  </div>
+  <div class="pn side">
+    <div class="pt"><h2>Today</h2><span>Live</span></div>
+    <div class="kpi"><div><small>Sales</small><b id="ks">₹0</b></div><div><small>Bills</small><b id="kb">0</b></div><div><small>UPI</small><b id="ku">₹0</b></div><div><small>Udhaar due</small><b id="kd">₹0</b></div></div>
+    <div class="pt"><h2 style="font-size:14px">Sales by hour</h2></div>
+    <div class="chart" id="chart"></div>
+    <div id="alerts"></div>
+    <div class="pt" style="margin-top:12px"><h2 style="font-size:14px">Udhaar book</h2></div>
+    <div class="udh" id="udh"></div>
+    <button class="wa" id="wa">Send day summary on WhatsApp</button>
+    <div class="msg" id="msg"><div id="msgt"></div></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+var P=[["🌾","Aashirvaad Atta 5kg",265,9],["🥛","Amul Milk 1L",68,14],["🍚","Basmati Rice 1kg",140,6],["🧂","Tata Salt 1kg",28,20],["🛢️","Sunflower Oil 1L",155,4],["🍪","Parle-G 800g",90,11],["🧼","Lifebuoy Soap ×4",120,5],["☕","Tata Tea 500g",260,3],["🍜","Maggi ×6",84,16],["🥚","Eggs (dozen)",84,8],["🍬","Sugar 1kg",48,12],["🧴","Surf Excel 1kg",135,2]];
+var bill={},stats={s:0,b:0,u:0,d:0},hours=[3200,4100,2600,1800,0],udh={"Verma ji":420,"Lakshmi aunty":180},bno=1042,q="";
+function inr(n){return "₹"+n.toLocaleString("en-IN")}
+function rp(){$("#prods").innerHTML=P.map(function(p,i){if(q&&p[1].toLowerCase().indexOf(q)<0)return"";var left=p[3]-(bill[i]||0);
+  return '<button class="pd'+(left<=0?" out":"")+'" data-p="'+i+'"><small class="'+(left<=3?"low":"")+'">'+left+'</small><span class="e">'+p[0]+'</span><b>'+p[1]+'</b><span>'+inr(p[2])+'</span></button>'}).join("")}
+function total(){var t=0,n=0;for(var i in bill){t+=bill[i]*P[i][2];n+=bill[i]}return[t,n]}
+function rb(){var k=Object.keys(bill);
+  $("#bl").innerHTML=k.length?k.map(function(i){return '<div class="br"><b>'+P[i][1]+'</b><div class="q"><button data-m="'+i+'">−</button>'+bill[i]+'<button data-p="'+i+'">+</button></div><span>'+inr(bill[i]*P[i][2])+'</span></div>'}).join(""):'<div class="empty">Tap products to start a bill</div>';
+  var t=total();$("#tt").textContent=inr(t[0]);$("#ti").textContent=t[1];
+  document.querySelectorAll("[data-pay]").forEach(function(b){b.disabled=!t[1]});rp()}
+function rs(){$("#ks").textContent=inr(stats.s);$("#kb").textContent=stats.b;$("#ku").textContent=inr(stats.u);
+  var due=0;for(var k in udh)due+=udh[k];$("#kd").textContent=inr(due);
+  var mx=Math.max.apply(null,hours.concat([1000]));
+  $("#chart").innerHTML=hours.map(function(h,i){return '<i style="height:'+Math.max(4,h/mx*72)+'px" data-h="'+(8+i*2)+'h"></i>'}).join("");
+  $("#udh").innerHTML=Object.keys(udh).map(function(k){return "<div><span>"+k+"</span><b>"+inr(udh[k])+"</b></div>"}).join("");
+  $("#alerts").innerHTML=P.filter(function(p){return p[3]<=3}).map(function(p){return '<div class="alert">⚠️ Low stock: '+p[1]+" ("+p[3]+" left)</div>"}).join("")}
+function toast(t){var e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(e.t);e.t=setTimeout(function(){e.classList.remove("on")},2200)}
+document.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+  if(b.dataset.p!==undefined){var i=b.dataset.p;if((bill[i]||0)<P[i][3]){bill[i]=(bill[i]||0)+1;rb()}}
+  else if(b.dataset.m!==undefined){var j=b.dataset.m;bill[j]--;if(!bill[j])delete bill[j];rb()}
+  else if(b.dataset.pay){var t=total()[0],m=b.dataset.pay;
+    for(var i2 in bill)P[i2][3]-=bill[i2];
+    stats.s+=t;stats.b++;hours[4]+=t;if(m==="UPI")stats.u+=t;
+    if(m==="Udhaar"){var c=($("#cust").value||"Customer").trim();udh[c]=(udh[c]||0)+t}
+    bill={};bno++;$("#bno").textContent=bno;rb();rs();
+    toast(m==="UPI"?"✓ "+inr(t)+" received via UPI":m==="Udhaar"?"✓ "+inr(t)+" added to udhaar":"✓ Bill saved · "+inr(t)+" cash")}
+  else if(b.id==="wa"){var due=0;for(var k in udh)due+=udh[k];
+    $("#msgt").textContent="🧾 KiranaBooks · Day summary\nSales: "+inr(stats.s)+" ("+stats.b+" bills)\nUPI: "+inr(stats.u)+"\nUdhaar due: "+inr(due)+"\nLow stock: "+(P.filter(function(p){return p[3]<=3}).map(function(p){return p[1]}).join(", ")||"none");
+    $("#msg").classList.add("on")}
+});
+$("#srch").addEventListener("input",function(){q=this.value.toLowerCase().trim();rp()});
+function tm(){$("#time").textContent=new Date().toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})}
+tm();setInterval(tm,30000);rb();rs();
+})();
+</script>
+</body>
+</html>

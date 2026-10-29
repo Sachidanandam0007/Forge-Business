@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CareCure Physio Local SEO – Marketing concept by Forge</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f2;--ink:#14231a;--mute:#5f7266;--gn:#1f7a4d;--gn2:#d8efe1;--card:#fff;--ln:#dde6df;--gbl:#1a0dab;--gst:#fbbc04}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.5 Figtree,system-ui,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.fb{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;font-size:14px}.fb a{font-weight:800}.fb span{color:var(--mute)}
+.head{max-width:1200px;margin:6px auto 30px;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.head small{color:var(--gn);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.head h1{font-size:clamp(34px,5vw,64px);line-height:1;letter-spacing:-.045em;font-weight:800;max-width:700px;margin-top:8px}
+.head h1 span{color:var(--gn)}
+.head p{max-width:420px;color:var(--mute)}
+.g{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.05fr 1fr;gap:24px;align-items:start}
+.box{background:var(--card);border:1px solid var(--ln);border-radius:26px;padding:22px}
+.box h2{font-size:20px;letter-spacing:-.03em;margin-bottom:4px}
+.box>p{color:var(--mute);font-size:14px;margin-bottom:14px}
+.tg{display:inline-flex;background:var(--bg);border-radius:99px;padding:4px;margin-bottom:14px}
+.tg button{padding:8px 16px;border-radius:99px;font-weight:800;font-size:13.5px;color:var(--mute)}
+.tg button.on{background:var(--ink);color:#fff}
+/* google mock */
+.gq{display:flex;align-items:center;gap:10px;border:1px solid #dfe1e5;border-radius:99px;padding:10px 16px;font-size:15px;box-shadow:0 1px 6px #20212424;margin-bottom:14px}
+.gq b{font-weight:400}
+.mp{border:1px solid #dadce0;border-radius:14px;overflow:hidden}
+.map{height:130px;background:#e8f0e9;position:relative;background-image:linear-gradient(90deg,#ffffff 2px,transparent 2px),linear-gradient(#ffffff 2px,transparent 2px),linear-gradient(35deg,transparent 46%,#f9e79f 46%,#f9e79f 54%,transparent 54%);background-size:60px 60px,60px 60px,100% 100%}
+.pin{position:absolute;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#ea4335;display:grid;place-items:center;box-shadow:0 2px 4px #0004;transition:all .5s}
+.pin i{transform:rotate(45deg);color:#fff;font-size:11px;font-weight:800;font-style:normal}
+.pin.us{background:var(--gn);width:34px;height:34px}
+.res{padding:12px 14px;border-top:1px solid #ebebeb;display:flex;justify-content:space-between;gap:10px;transition:background .4s}
+.res b{color:var(--gbl);font-weight:600;font-size:15px}
+.res .st{font-size:13px;color:#70757a}.res .st em{color:#e37400;font-style:normal}
+.res .cta{display:flex;gap:6px;align-items:center}.res .cta span{border:1px solid #dadce0;border-radius:99px;padding:4px 10px;font-size:12px;color:#1a73e8}
+.res.us{background:#f1faf4}
+.res.us b:after{content:" ✓";color:var(--gn)}
+.nf{padding:12px 14px;border-top:1px solid #ebebeb;font-size:13px;color:#70757a}
+.cap{font-size:12px;color:var(--mute);margin-top:10px}
+/* plan */
+.wk{border-top:1px solid var(--ln);padding:12px 0}
+.wk h3{font-size:14px;display:flex;justify-content:space-between;cursor:pointer}
+.wk h3 span{color:var(--mute);font-weight:400}
+.task{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:14px;cursor:pointer}
+.task input{width:18px;height:18px;accent-color:var(--gn);margin-top:2px;flex:none}
+.task.done span{text-decoration:line-through;color:var(--mute)}
+.prog{height:10px;background:var(--bg);border-radius:9px;overflow:hidden;margin:6px 0 4px}
+.prog i{display:block;height:100%;background:var(--gn);width:0;transition:width .4s}
+.pl{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-bottom:6px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:left;padding:8px 6px;border-bottom:1.5px solid var(--ln)}
+td{padding:9px 6px;border-bottom:1px solid var(--ln)}
+td .b{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:800}
+.hi{background:#d8efe1;color:var(--gn)}.md{background:#fff1cc;color:#8a6100}
+.rev{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rev textarea{width:100%;min-height:150px;border:1px solid var(--ln);border-radius:14px;padding:12px;font:inherit;font-size:14px;resize:vertical}
+.rev input{width:100%;border:1px solid var(--ln);border-radius:12px;padding:10px 12px;font:inherit;font-size:16px;margin-bottom:8px}
+.rev button{width:100%;background:#25d366;color:#05301a;font-weight:800;border-radius:12px;padding:11px}
+.wide{max-width:1200px;margin:24px auto 60px;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:960px){.g,.wide{grid-template-columns:1fr}.rev{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="fb"><a href="../index.html#work">← Back to Forge</a><span>Marketing concept · local SEO plan</span></div>
+<div class="head">
+  <div><small>Digital marketing · local SEO</small><h1>Be the first clinic they see for <span>“physio near me”.</span></h1></div>
+  <p>Concept plan for CareCure Physio, a neighbourhood physiotherapy clinic: Google Business profile, reviews, location pages and a 90-day action plan to win the local map pack.</p>
+</div>
+<div class="g">
+  <div class="box">
+    <h2>The goal: the map pack</h2><p>Illustration of where the clinic should appear for its most valuable search.</p>
+    <div class="tg"><button class="on" data-v="0">Before</button><button data-v="1">After 90 days (target)</button></div>
+    <div class="gq">🔍 <b>physiotherapist near me</b></div>
+    <div class="mp">
+      <div class="map" id="map"></div>
+      <div id="list"></div>
+    </div>
+    <p class="cap">Illustrative mock-up. Competitor names are fictional; real rankings depend on location, competition and reviews.</p>
+  </div>
+  <div class="box">
+    <h2>90-day action plan</h2><p>Tick tasks to see the plan come together.</p>
+    <div class="pl"><span>Progress</span><span id="pp">0 / 0</span></div>
+    <div class="prog"><i id="pb"></i></div>
+    <div id="plan"></div>
+  </div>
+</div>
+<div class="wide">
+  <div class="box"><h2>Keyword map</h2><p>Each search gets its own page or profile section.</p>
+    <table><thead><tr><th>Search</th><th>Intent</th><th>Page</th></tr></thead><tbody>
+      <tr><td>physiotherapist near me</td><td><span class="b hi">Book now</span></td><td>Google profile + home</td></tr>
+      <tr><td>back pain physio koramangala</td><td><span class="b hi">Book now</span></td><td>/back-pain-treatment</td></tr>
+      <tr><td>sports injury rehab bangalore</td><td><span class="b hi">Book now</span></td><td>/sports-rehab</td></tr>
+      <tr><td>physio home visit</td><td><span class="b md">Compare</span></td><td>/home-visits</td></tr>
+      <tr><td>frozen shoulder exercises</td><td><span class="b md">Learn</span></td><td>Blog + Reel</td></tr>
+      <tr><td>knee pain after running</td><td><span class="b md">Learn</span></td><td>Blog + Reel</td></tr>
+    </tbody></table>
+  </div>
+  <div class="box"><h2>Review request generator</h2><p>Reviews are the #1 lever for local rank. Make asking effortless for the front desk.</p>
+    <div class="rev">
+      <div><input id="pn" value="Rohit" aria-label="Patient name"><input id="tx" value="lower back pain" aria-label="Treatment"><button id="send" type="button">Copy WhatsApp message</button></div>
+      <textarea id="msg" aria-label="Message preview" readonly></textarea>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},v=0;
+var C=[["Align Physio Centre","4.3","(212)","1.2 km"],["MoveWell Clinic","4.1","(98)","2.0 km"],["Spine & Joint Care","4.4","(341)","2.6 km"]];
+var US=["CareCure Physio","4.8","(126)","0.6 km"];
+function row(c,us){return '<div class="res'+(us?" us":"")+'"><div><b>'+c[0]+'</b><div class="st">'+c[1]+' <em>★★★★★</em> '+c[2]+" · Physiotherapist · "+c[3]+'</div><div class="st">'+(us?"Open · Closes 8pm · Home visits":"Open · Closes 7pm")+'</div></div><div class="cta"><span>Website</span><span>Directions</span></div></div>'}
+function render(){
+  var list=v?[US].concat(C.slice(0,2)):C;
+  $("#list").innerHTML=list.map(function(c,i){return row(c,v&&i===0)}).join("")+(v?"":'<div class="nf">CareCure Physio: not in the top 3 (profile incomplete, 9 reviews)</div>');
+  var pins=[[22,40,"A"],[60,24,"B"],[78,62,"C"]];
+  $("#map").innerHTML=pins.map(function(p){return'<span class="pin" style="left:'+p[0]+'%;top:'+p[1]+'%"><i>'+p[2]+"</i></span>"}).join("")+(v?'<span class="pin us" style="left:45%;top:38%"><i>★</i></span>':"");
+}
+document.querySelectorAll(".tg button").forEach(function(b){b.onclick=function(){v=+b.dataset.v;document.querySelectorAll(".tg button").forEach(function(x){x.classList.toggle("on",x===b)});render()}});
+var P=[["Days 1–15 · Foundation",["Claim & verify Google Business profile","Correct categories: Physiotherapist + Sports medicine","Add 25 real photos (clinic, team, equipment)","Match name, address, phone everywhere (NAP)"]],
+       ["Days 16–45 · Pages & proof",["Build 4 treatment pages for top searches","Add booking button + WhatsApp to every page","Start review requests after every 3rd session","List on Practo, Justdial and Google Maps"]],
+       ["Days 46–90 · Momentum",["Post weekly Google updates + offers","2 exercise Reels a week, linked to pages","Reply to every review within 24 hours","Monthly report: calls, direction requests, bookings"]]];
+var h="",n=0;P.forEach(function(w,i){h+='<div class="wk"><h3>'+w[0]+"<span>"+w[1].length+" tasks</span></h3>";w[1].forEach(function(t){n++;h+='<label class="task"><input type="checkbox"><span>'+t+"</span></label>"});h+="</div>"});
+$("#plan").innerHTML=h;
+function prog(){var c=document.querySelectorAll("#plan input:checked").length;$("#pp").textContent=c+" / "+n;$("#pb").style.width=c/n*100+"%";document.querySelectorAll(".task").forEach(function(t){t.classList.toggle("done",t.querySelector("input").checked)})}
+$("#plan").addEventListener("change",prog);prog();
+function msg(){var p=$("#pn").value.trim()||"there",t=$("#tx").value.trim()||"your treatment";
+  $("#msg").value="Hi "+p+", this is CareCure Physio 🙂\nWe hope your "+t+" is feeling much better!\n\nIf we helped, would you take 30 seconds to leave us a Google review? It helps others nearby find good care:\n👉 g.page/r/carecure-physio/review\n\nThank you, Team CareCure"}
+$("#pn").oninput=msg;$("#tx").oninput=msg;msg();
+$("#send").onclick=function(){var b=this;try{navigator.clipboard.writeText($("#msg").value).catch(function(){})}catch(e){}b.textContent="✓ Copied";setTimeout(function(){b.textContent="Copy WhatsApp message"},1500)};
+render();
+})();
+</script>
+</body>
+</html>

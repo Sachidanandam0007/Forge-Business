@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NestFinder Lead Agent – AI agent concept by Forge</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e9;--ink:#1c1712;--mute:#7b7064;--ac:#c2410c;--wa:#075e54;--wab:#efeae2;--me:#d9fdd3;--card:#fff;--ln:#e7ddd0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.45 "Inter Tight",system-ui,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.fb{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;font-size:14px}.fb a{font-weight:800}.fb span{color:var(--mute)}
+.head{max-width:1240px;margin:6px auto 28px;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.head h1{font-size:clamp(34px,4.8vw,64px);line-height:.98;letter-spacing:-.045em;font-weight:800;max-width:700px}
+.head h1 span{color:var(--ac)}
+.head p{max-width:400px;color:var(--mute)}
+.g{max-width:1240px;margin:0 auto 60px;padding:0 24px;display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:start}
+.ph{background:#111;border-radius:44px;padding:10px;box-shadow:0 50px 90px -40px #1c171299}
+.scr{border-radius:35px;overflow:hidden;height:700px;display:flex;flex-direction:column;background:var(--wab)}
+.wh{background:var(--wa);color:#fff;padding:34px 14px 12px;display:flex;align-items:center;gap:10px}
+.wh .av{width:38px;height:38px;border-radius:50%;background:#f97316;display:grid;place-items:center;font-weight:800}
+.wh b{display:block;font-size:15px}.wh small{font-size:12px;opacity:.8}
+.log{flex:1;overflow-y:auto;padding:14px 10px;display:flex;flex-direction:column;gap:6px;background:var(--wab) radial-gradient(#00000008 1px,transparent 1px) 0 0/14px 14px}
+.m{max-width:82%;padding:8px 10px 6px;border-radius:10px;font-size:14px;box-shadow:0 1px 0 #0000001a;position:relative;animation:pop .25s ease}
+.m small{display:block;text-align:right;font-size:10.5px;color:#667781;margin-top:2px}
+.m.a{background:#fff;align-self:flex-start;border-top-left-radius:2px}
+.m.u{background:var(--me);align-self:flex-end;border-top-right-radius:2px}
+@keyframes pop{from{opacity:0;transform:scale(.96)}}
+.qr{display:flex;flex-direction:column;gap:6px;align-self:flex-start;width:82%}
+.qr button{background:#fff;color:#027eb5;border-radius:10px;padding:9px;font-weight:600;font-size:14px;box-shadow:0 1px 0 #0000001a}
+.qr button:hover{background:#f0f9ff}
+.typ{align-self:flex-start;background:#fff;border-radius:10px;padding:10px 12px;font-size:13px;color:#667781}
+.wf{display:flex;gap:6px;padding:8px;background:var(--wab)}
+.wf input{flex:1;min-width:0;border:0;border-radius:22px;padding:11px 14px;font:inherit;font-size:16px}
+.wf input:focus{outline:2px solid #25d366}
+.wf button{width:44px;height:44px;border-radius:50%;background:#00a884;color:#fff;font-size:18px}
+/* CRM */
+.crm{background:var(--card);border:1px solid var(--ln);border-radius:28px;padding:22px}
+.ct{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:10px;flex-wrap:wrap}
+.ct h2{font-size:22px;letter-spacing:-.03em}.ct span{font-size:13px;color:var(--mute)}
+.ct button{border:1.5px solid var(--ink);border-radius:99px;padding:8px 14px;font-weight:600;font-size:13.5px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.col{background:#faf6f0;border-radius:20px;padding:12px;min-height:420px}
+.col h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;margin-bottom:10px}
+.col h3 i{font-style:normal;color:var(--mute)}
+.ld{background:#fff;border:1px solid var(--ln);border-radius:16px;padding:12px;margin-bottom:8px;font-size:13.5px}
+.ld b{display:block;font-size:15px}
+.ld .tg{display:flex;flex-wrap:wrap;gap:4px;margin:8px 0}
+.ld .tg span{background:#f3ece2;border-radius:99px;padding:2px 8px;font-size:12px}
+.ld .sc{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--mute)}
+.ld .sc em{font-style:normal;font-weight:800;color:#fff;padding:2px 8px;border-radius:99px}
+.ld.new{animation:land .8s cubic-bezier(.2,.8,.2,1);border:2px solid var(--ac);box-shadow:0 12px 30px -12px #c2410c66}
+@keyframes land{from{opacity:0;transform:translateY(-30px) scale(.95)}}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.how div{border:1px solid var(--ln);border-radius:16px;padding:12px;font-size:13.5px;color:var(--mute)}
+.how b{color:var(--ink);display:block}
+@media(max-width:1000px){.g{grid-template-columns:1fr}.ph{max-width:380px;margin:0 auto;width:100%}}
+@media(max-width:700px){.cols,.how{grid-template-columns:1fr}.col{min-height:0}}
+</style>
+</head>
+<body>
+<div class="fb"><a href="../index.html#work">← Back to Forge</a><span>AI agent concept · scripted demo</span></div>
+<div class="head">
+  <h1>Every WhatsApp enquiry, <span>qualified before your coffee.</span></h1>
+  <p>Concept for a real-estate developer: an AI agent answers ad enquiries on WhatsApp, asks the right questions, scores the lead and drops it into the sales CRM. <b>Try it:</b> answer as a buyer.</p>
+</div>
+<div class="g">
+  <div class="ph"><div class="scr">
+    <div class="wh"><span class="av">N</span><span><b>NestFinder Homes</b><small>AI assistant · typically replies instantly</small></span></div>
+    <div class="log" id="log"></div>
+    <form class="wf" id="wf"><input id="in" placeholder="Message" autocomplete="off"><button aria-label="Send">➤</button></form>
+  </div></div>
+  <div class="crm">
+    <div class="ct"><div><h2>Sales pipeline</h2><span>Leads appear here automatically</span></div><button id="again">↻ New enquiry</button></div>
+    <div class="cols">
+      <div class="col"><h3>🔥 Hot <i id="c0"></i></h3><div id="k0"></div></div>
+      <div class="col"><h3>🌤 Warm <i id="c1"></i></h3><div id="k1"></div></div>
+      <div class="col"><h3>❄️ Nurture <i id="c2"></i></h3><div id="k2"></div></div>
+    </div>
+    <div class="how"><div><b>Asks 4 questions</b>Purpose, budget, area, timeline</div><div><b>Scores 0–100</b>Hot leads alert sales in 1 min</div><div><b>Never sleeps</b>Late-night ad leads don't go cold</div></div>
+  </div>
+</div>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},log=$("#log"),lead,step;
+var seed=[[0,"Karthik R.","Buy · ₹1–1.5 Cr · Whitefield · 0–3 months",92],[1,"Meenal S.","Buy · ₹80L–1 Cr · Sarjapur · 3–6 months",68],[2,"Arif K.","Rent · Hebbal · just browsing",31],[1,"Divya P.","Buy · ₹1.5 Cr+ · Hebbal · 3–6 months",74]];
+var Qs=[
+ {k:"p",q:"Hi! 👋 Thanks for your interest in NestFinder Homes. Are you looking to buy or rent?",o:["Buy a home","Rent","Just exploring"]},
+ {k:"b",q:"Great! What budget are you considering?",o:["Under ₹80 L","₹80 L – 1.5 Cr","₹1.5 Cr +"]},
+ {k:"l",q:"Which area do you prefer?",o:["Whitefield","Sarjapur Road","Hebbal"]},
+ {k:"t",q:"And when are you planning to move?",o:["Within 3 months","3–6 months","Not sure yet"]},
+ {k:"n",q:"Perfect. May I have your name so our advisor can share floor plans?"}];
+function now(){return new Date().toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})}
+function esc(s){return s.replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function add(cls,h){var d=document.createElement("div");d.className=cls;d.innerHTML=h;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+function bot(t,o){var ty=add("typ","typing…");setTimeout(function(){ty.remove();add("m a",esc(t).replace(/\n/g,"<br>")+"<small>"+now()+"</small>");
+  if(o){var q=add("qr","");o.forEach(function(x){var b=document.createElement("button");b.type="button";b.textContent=x;b.onclick=function(){q.remove();answer(x)};q.appendChild(b)})}},800)}
+function me(t){add("m u",esc(t)+"<small>"+now()+" ✓✓</small>")}
+function ask(){var q=Qs[step];bot(q.q,q.o)}
+function answer(x){me(x);lead[Qs[step].k]=x;step++;
+  if(lead.p==="Just exploring"&&step===1){step=2}
+  if(step<Qs.length)ask();else done()}
+function score(){var s=20;if(lead.p==="Buy a home")s+=25;else if(lead.p==="Rent")s+=5;
+  if(lead.b==="₹1.5 Cr +")s+=25;else if(lead.b==="₹80 L – 1.5 Cr")s+=18;else if(lead.b)s+=8;
+  if(lead.t==="Within 3 months")s+=25;else if(lead.t==="3–6 months")s+=12;return Math.min(98,s)}
+function done(){var s=score(),col=s>=75?0:s>=50?1:2;
+  bot(col===0?"Thanks "+lead.n+"! 🙌 Based on what you shared, our advisor Neha will call you within 15 minutes with matching homes in "+lead.l+". Want the brochure here meanwhile?":"Thanks "+lead.n+"! I've shared your preferences with our team. We'll send you new launches in "+lead.l+" that match your budget.");
+  setTimeout(function(){card(col,lead.n,[lead.p.replace(" a home",""),lead.b||"—",lead.l,lead.t].join(" · "),s,true)},1300)}
+function card(col,n,meta,s,isNew){var c=["#c2410c","#d97706","#64748b"][col];var d=document.createElement("div");d.className="ld"+(isNew?" new":"");
+  d.innerHTML="<b>"+esc(n)+(isNew?" · just now":"")+'</b><div class="tg">'+meta.split(" · ").map(function(x){return"<span>"+esc(x)+"</span>"}).join("")+'</div><div class="sc"><span>Lead score</span><em style="background:'+c+'">'+s+"</em></div>";
+  var k=$("#k"+col);k.insertBefore(d,k.firstChild);cnt()}
+function cnt(){for(var i=0;i<3;i++)$("#c"+i).textContent=$("#k"+i).children.length}
+function start(){log.innerHTML="";lead={};step=0;add("m u","Hi, I saw your ad on Instagram for the 3BHK project<small>"+now()+" ✓✓</small>");ask()}
+$("#wf").addEventListener("submit",function(e){e.preventDefault();var v=$("#in").value.trim();if(!v)return;$("#in").value="";
+  var q=Qs[step];if(!q)return me(v);document.querySelectorAll(".qr").forEach(function(x){x.remove()});
+  if(q.k==="n"){answer(v);return}
+  var hit=(q.o||[]).filter(function(o){return o.toLowerCase().split(/[ –]+/).some(function(w){return w.length>2&&v.toLowerCase().indexOf(w.replace(/[₹+]/g,""))>-1})})[0];
+  answer(hit||v)});
+$("#again").onclick=start;
+seed.forEach(function(s){card(s[0],s[1],s[2],s[3])});start();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SmileLine AI Receptionist – AI agent concept by Forge</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f7fb;--ink:#0f1b33;--mute:#62708a;--bl:#2563eb;--bl2:#dbe7ff;--card:#fff;--ln:#e2e8f2;--gr:#16a34a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.5 Manrope,system-ui,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.fb{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;font-size:14px}.fb a{font-weight:800}.fb span{color:var(--mute)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:1fr 420px;gap:34px;align-items:start}
+.site{background:linear-gradient(160deg,#fff,#eef4ff);border:1px solid var(--ln);border-radius:30px;padding:clamp(24px,4vw,46px);position:relative;overflow:hidden}
+.site:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,#93c5fd88,transparent 70%);right:-120px;top:-120px}
+.logo{font-weight:800;font-size:20px;display:flex;gap:8px;align-items:center}
+.logo i{width:30px;height:30px;border-radius:10px;background:var(--bl);color:#fff;display:grid;place-items:center;font-style:normal}
+.site h1{font-size:clamp(34px,4.4vw,58px);line-height:1.02;letter-spacing:-.04em;margin:34px 0 14px;max-width:520px;position:relative}
+.site h1 span{color:var(--bl)}
+.site p{color:var(--mute);max-width:470px;position:relative}
+.tre{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px;position:relative}
+.tre div{background:#fff;border:1px solid var(--ln);border-radius:18px;padding:14px}
+.tre b{display:block}.tre span{font-size:13px;color:var(--mute)}
+.trace{margin-top:22px;background:#0b1220;color:#c7d2fe;border-radius:22px;padding:18px;font:400 12.5px/1.6 "JetBrains Mono",monospace;min-height:170px}
+.trace h4{font:600 12px Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#7c89a8;margin-bottom:8px;display:flex;justify-content:space-between}
+#trace>div{animation:fi .4s ease}
+.trace .t{color:#86efac}.trace .k{color:#fcd34d}
+@keyframes fi{from{opacity:0;transform:translateX(-6px)}}
+/* chat */
+.chat{background:var(--card);border:1px solid var(--ln);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;height:680px;box-shadow:0 40px 80px -40px #0f1b3355;position:sticky;top:20px}
+.ch{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--bl);color:#fff}
+.ch .av{width:42px;height:42px;border-radius:50%;background:#fff;color:var(--bl);display:grid;place-items:center;font-weight:800;position:relative}
+.ch .av:after{content:"";position:absolute;right:0;bottom:0;width:11px;height:11px;border-radius:50%;background:#4ade80;border:2px solid var(--bl)}
+.ch b{display:block}.ch small{opacity:.8;font-size:12.5px}
+.lang{margin-left:auto;display:flex;background:#ffffff26;border-radius:99px;padding:3px}
+.lang button{padding:5px 10px;border-radius:99px;font-size:12px;font-weight:800;color:#fff}
+.lang button.on{background:#fff;color:var(--bl)}
+.log{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;background:#f8fafd}
+.m{max-width:85%;padding:11px 14px;border-radius:18px;font-size:14.5px;animation:pop .3s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}}
+.m.a{background:#fff;border:1px solid var(--ln);border-bottom-left-radius:6px;align-self:flex-start}
+.m.u{background:var(--bl);color:#fff;border-bottom-right-radius:6px;align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:95%}
+.chips button{border:1.5px solid var(--bl);color:var(--bl);border-radius:99px;padding:7px 12px;font-size:13px;font-weight:600;background:#fff}
+.chips button:hover{background:var(--bl);color:#fff}
+.card{align-self:flex-start;background:#fff;border:1.5px solid #bbf7d0;border-radius:18px;padding:14px;max-width:88%;font-size:14px}
+.card b{color:var(--gr);display:block;margin-bottom:4px}
+.typ{display:flex;gap:4px;padding:14px}.typ i{width:7px;height:7px;border-radius:50%;background:#9aa6bd;animation:b 1s infinite}.typ i:nth-child(2){animation-delay:.15s}.typ i:nth-child(3){animation-delay:.3s}
+@keyframes b{30%{transform:translateY(-4px)}}
+.f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--ln)}
+.f input{flex:1;min-width:0;border:1.5px solid var(--ln);border-radius:99px;padding:12px 16px;font:inherit;font-size:16px}
+.f input:focus{outline:none;border-color:var(--bl)}
+.f button{width:46px;height:46px;border-radius:50%;background:var(--bl);color:#fff;font-size:18px}
+.disc{font-size:11.5px;color:var(--mute);text-align:center;padding:0 12px 10px}
+@media(max-width:960px){.wrap{grid-template-columns:1fr}.chat{position:relative;top:0;height:620px}.tre{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="fb"><a href="../index.html#work">← Back to Forge</a><span>AI agent concept · scripted demo</span></div>
+<div class="wrap">
+  <div>
+    <div class="site">
+      <div class="logo"><i>S</i>SmileLine Dental</div>
+      <h1>A receptionist that never <span>puts you on hold.</span></h1>
+      <p>Concept for a dental clinic: an AI receptionist on the website that answers questions about treatments and fees and books appointments straight into the clinic calendar, in English or Hindi.</p>
+      <div class="tre"><div><b>24/7 answers</b><span>Fees, timings, insurance</span></div><div><b>Books slots</b><span>Live calendar check</span></div><div><b>Hands off</b><span>Emergencies go to staff</span></div></div>
+    </div>
+    <div class="trace"><h4><span>What the agent is doing</span><span>tool calls</span></h4><div id="trace"><div>› waiting for a patient…</div></div></div>
+  </div>
+  <div class="chat">
+    <div class="ch"><span class="av">AI</span><span><b>Riya · SmileLine</b><small>AI receptionist · online</small></span><span class="lang"><button class="on" data-l="en">EN</button><button data-l="hi">हि</button></span></div>
+    <div class="log" id="log"></div>
+    <form class="f" id="f"><input id="in" placeholder="Ask about fees, timings, or book…" autocomplete="off"><button aria-label="Send">→</button></form>
+    <div class="disc">Scripted demo. The production agent runs on Claude and your clinic's real calendar.</div>
+  </div>
+</div>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},log=$("#log"),L="en",bk={};
+var T={
+ en:{hi:"Hi! I'm Riya, SmileLine's AI receptionist. How can I help you today?",menu:["Book an appointment","Treatment fees","Clinic timings","Tooth pain now"],
+   fees:"Our most asked prices:\n• Consultation ₹300\n• Scaling & polishing ₹1,200\n• Filling from ₹1,500\n• Root canal from ₹5,500\n• Braces consult free\nWant to book a visit?",
+   time:"We're open Mon–Sat, 9:30am–8pm, and Sunday 10am–1pm. We're at 12 MG Road, near the metro.",
+   pain:"I'm sorry you're in pain. 🦷 We keep emergency slots every day. I can book the earliest one for you right now.",
+   which:"Sure! What would you like to come in for?",tr:["Check-up","Cleaning","Tooth pain","Braces consult"],
+   day:"Great. Which day works for you?",slot:"Here are the open slots:",name:"Almost done. What's the patient's name?",
+   done:function(b){return "✅ Booked!\n"+b.t+" · "+b.d+" at "+b.s+"\nPatient: "+b.n+"\nYou'll get a WhatsApp confirmation and a reminder 2 hours before."},
+   more:"Anything else I can help with?",fb:"I can help with appointments, fees and timings. For anything else, our team will call you back."},
+ hi:{hi:"नमस्ते! मैं रिया हूँ, SmileLine की AI रिसेप्शनिस्ट। मैं आपकी कैसे मदद कर सकती हूँ?",menu:["अपॉइंटमेंट बुक करें","इलाज की फीस","क्लिनिक का समय","अभी दाँत में दर्द"],
+   fees:"मुख्य फीस:\n• कंसल्टेशन ₹300\n• स्केलिंग ₹1,200\n• फिलिंग ₹1,500 से\n• रूट कैनाल ₹5,500 से\nक्या मैं अपॉइंटमेंट बुक करूँ?",
+   time:"हम सोम–शनि सुबह 9:30 से रात 8 बजे तक और रविवार 10 से 1 बजे तक खुले हैं।",
+   pain:"माफ़ कीजिए, आपको दर्द है। 🦷 हमारे पास रोज़ इमरजेंसी स्लॉट होते हैं। मैं अभी सबसे पहला स्लॉट बुक कर सकती हूँ।",
+   which:"ज़रूर! आप किस लिए आना चाहेंगे?",tr:["चेक-अप","सफ़ाई","दाँत दर्द","ब्रेसेस"],
+   day:"बढ़िया। कौन सा दिन ठीक रहेगा?",slot:"ये स्लॉट खाली हैं:",name:"बस आख़िरी बात, मरीज़ का नाम क्या है?",
+   done:function(b){return "✅ बुक हो गया!\n"+b.t+" · "+b.d+", "+b.s+"\nमरीज़: "+b.n+"\nWhatsApp पर कन्फ़र्मेशन भेज दिया है।"},
+   more:"और कुछ मदद चाहिए?",fb:"मैं अपॉइंटमेंट, फीस और समय में मदद कर सकती हूँ।"}};
+function esc(s){return s.replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function add(cls,html){var d=document.createElement("div");d.className=cls;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+function say(t,chips,cb){var ty=add("m a",'<span class="typ"><i></i><i></i><i></i></span>');
+  setTimeout(function(){ty.innerHTML=esc(t).replace(/\n/g,"<br>");if(chips)chipset(chips,cb);log.scrollTop=log.scrollHeight},650+Math.min(900,t.length*6))}
+function chipset(list,cb){var c=add("chips","");list.forEach(function(x){var b=document.createElement("button");b.type="button";b.textContent=x;b.onclick=function(){c.remove();user(x);cb(x)};c.appendChild(b)})}
+function user(t){add("m u",esc(t))}
+function tr(line){var d=document.createElement("div");d.innerHTML=line;$("#trace").appendChild(d);var all=$("#trace").children;if(all.length>8)all[0].remove()}
+function menu(){say(T[L].more,T[L].menu,route)}
+function route(x){var m=T[L].menu,i=m.indexOf(x);
+  if(i===0)book();
+  else if(i===1){tr('<span class="t">›</span> answer_from_kb(<span class="k">"fees"</span>)');say(T[L].fees,[m[0],m[2]],route)}
+  else if(i===2){tr('<span class="t">›</span> answer_from_kb(<span class="k">"timings"</span>)');say(T[L].time);setTimeout(menu,1600)}
+  else if(i===3){tr('<span class="t">›</span> classify_intent → <span class="k">urgent_pain</span>');bk.t=T[L].tr[2];say(T[L].pain);setTimeout(pickDay,1500)}}
+function book(){bk={};say(T[L].which,T[L].tr,function(x){bk.t=x;pickDay()})}
+function pickDay(){var ds=[];for(var i=0;i<3;i++){var d=new Date();d.setDate(d.getDate()+i);ds.push(d.toLocaleDateString(L==="hi"?"hi-IN":"en-IN",{weekday:"short",day:"numeric",month:"short"}))}
+  tr('<span class="t">›</span> check_calendar(days=<span class="k">3</span>)');say(T[L].day,ds,function(x){bk.d=x;pickSlot()})}
+function pickSlot(){var s=["10:30","12:00","4:15 pm","6:45 pm"];tr('<span class="t">›</span> calendar → <span class="k">'+s.length+' open slots</span> on '+bk.d);
+  say(T[L].slot,s,function(x){bk.s=x;say(T[L].name);bk.wait=true})}
+function finish(n){bk.n=n;bk.wait=false;tr('<span class="t">›</span> create_booking({patient:<span class="k">"'+esc(n)+'"</span>, slot:<span class="k">"'+bk.s+'"</span>})');
+  tr('<span class="t">›</span> send_whatsapp(confirmation) ✓');
+  setTimeout(function(){add("card","<b>Appointment confirmed</b>"+esc(T[L].done(bk)).replace(/\n/g,"<br>"));setTimeout(menu,1200)},900)}
+$("#f").addEventListener("submit",function(e){e.preventDefault();var v=$("#in").value.trim();if(!v)return;$("#in").value="";user(v);
+  if(bk.wait)return finish(v);
+  var s=v.toLowerCase();tr('<span class="t">›</span> understand(<span class="k">"'+esc(v.slice(0,30))+'"</span>)');
+  if(/book|appoint|slot|बुक|अपॉइंट/.test(s))book();
+  else if(/fee|price|cost|charge|rate|₹|फीस|कितना/.test(s))route(T[L].menu[1]);
+  else if(/time|open|hour|sunday|समय|खुल/.test(s))route(T[L].menu[2]);
+  else if(/pain|hurt|ache|swell|emergenc|दर्द/.test(s))route(T[L].menu[3]);
+  else{say(T[L].fb,T[L].menu,route)}});
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){if(b.classList.contains("on"))return;L=b.dataset.l;document.querySelectorAll(".lang button").forEach(function(x){x.classList.toggle("on",x===b)});log.innerHTML="";bk={};tr('<span class="t">›</span> set_language(<span class="k">"'+L+'"</span>)');say(T[L].hi,T[L].menu,route)}});
+say(T[L].hi,T[L].menu,route);
+})();
+</script>
+</body>
+</html>

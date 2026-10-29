@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bloom Café Launch – Marketing concept by Forge</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff6ee;--ink:#2b1630;--mute:#8a6f86;--pk:#ff6fa8;--or:#ff9f43;--lv:#b9a3ff;--gr:#7bd389;--card:#fff;--ln:#f1dfe6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 15.5px/1.5 Karla,system-ui,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.fb{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;font-size:14px}.fb a{font-weight:600}.fb span{color:var(--mute)}
+.hero{max-width:1200px;margin:0 auto;padding:10px 24px 30px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.hero small{font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pk);font-size:12.5px}
+.hero h1{font:800 clamp(44px,7vw,104px)/.9 Syne,sans-serif;letter-spacing:-.04em;margin-top:10px}
+.hero h1 span{background:linear-gradient(90deg,var(--pk),var(--or));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mute);font-size:17px}
+.pill{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.pill div{background:var(--card);border:1px solid var(--ln);border-radius:18px;padding:14px}
+.pill b{font:800 24px Syne,sans-serif;display:block}.pill span{font-size:12.5px;color:var(--mute)}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;gap:8px;flex-wrap:wrap}
+.tabs button{padding:11px 20px;border-radius:99px;border:1.5px solid var(--ink);font-weight:600}
+.tabs button.on{background:var(--ink);color:var(--bg)}
+.pane{display:none;max-width:1200px;margin:24px auto 60px;padding:0 24px}.pane.on{display:block;animation:fi .4s ease}
+@keyframes fi{from{opacity:0;transform:translateY(10px)}}
+/* feed */
+.feed{display:grid;grid-template-columns:340px 1fr;gap:34px;align-items:start}
+.ig{background:var(--card);border:1px solid var(--ln);border-radius:30px;padding:18px;box-shadow:0 40px 70px -40px #2b163055}
+.igh{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.igh .av{width:62px;height:62px;border-radius:50%;padding:3px;background:linear-gradient(45deg,var(--or),var(--pk),var(--lv))}
+.igh .av i{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#2b1630;color:#fff;font:800 18px Syne,sans-serif;font-style:normal;border:3px solid #fff}
+.igh b{display:block}.igh span{font-size:12.5px;color:var(--mute)}
+.bio{font-size:13.5px;margin-bottom:12px}
+.grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:10px;overflow:hidden}
+.t{aspect-ratio:1;display:grid;place-items:center;text-align:center;padding:8px;font:800 12px/1.05 Syne,sans-serif;color:#fff;position:relative;cursor:pointer;transition:filter .2s}
+.t:hover{filter:brightness(1.1)}
+.t.r:after{content:"▶";position:absolute;top:6px;right:7px;font-size:10px}
+.t.on{outline:3px solid var(--ink);outline-offset:-3px}
+.det{background:var(--card);border:1px solid var(--ln);border-radius:26px;padding:26px}
+.det small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--pk);font-weight:600}
+.det h2{font:800 32px/1 Syne,sans-serif;letter-spacing:-.03em;margin:8px 0 12px}
+.det .cap{background:#fff6ee;border-radius:16px;padding:16px;font-size:15px;white-space:pre-line;margin:14px 0}
+.det .meta{display:flex;flex-wrap:wrap;gap:8px}
+.det .meta span{border:1px solid var(--ln);border-radius:99px;padding:5px 12px;font-size:13px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.pillars div{border-radius:18px;padding:14px;color:#2b1630}
+.pillars b{display:block;font-family:Syne,sans-serif}
+.pillars span{font-size:13px}
+/* reels */
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.reel{background:var(--card);border:1px solid var(--ln);border-radius:26px;padding:18px}
+.reel h3{font:800 20px Syne,sans-serif;letter-spacing:-.02em}
+.reel p{font-size:13.5px;color:var(--mute);margin:4px 0 12px}
+.frames{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.fr{aspect-ratio:9/16;border-radius:10px;padding:6px;font-size:10.5px;line-height:1.15;color:#fff;display:flex;flex-direction:column;justify-content:space-between;font-weight:600}
+.fr i{font-style:normal;opacity:.8;font-size:9.5px}
+.hook{margin-top:12px;font-size:13px;background:#fff6ee;border-radius:12px;padding:10px}
+.hook b{color:var(--pk)}
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal .dh{font-size:12px;font-weight:600;color:var(--mute);text-align:center;padding:4px 0}
+.day{min-height:84px;background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:8px;text-align:left;font-size:12px;display:flex;flex-direction:column;gap:4px;transition:transform .15s}
+.day:hover{transform:translateY(-2px)}
+.day b{font-size:13px}
+.day span{border-radius:7px;padding:2px 6px;font-weight:600;color:#2b1630;font-size:11px}
+.day.sel{border:2px solid var(--ink)}
+.leg{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 14px;font-size:13px}
+.leg i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+.dd{margin-top:16px;background:var(--card);border:1px solid var(--ln);border-radius:20px;padding:18px;min-height:80px}
+.note{font-size:12.5px;color:var(--mute);margin-top:18px}
+@media(max-width:960px){.hero,.feed{grid-template-columns:1fr}.reels{grid-template-columns:1fr}.ig{max-width:380px}}
+@media(max-width:620px){.cal{gap:3px}.day{min-height:58px;padding:4px;font-size:10px}.day span{font-size:0;padding:0;height:6px}.pillars,.pill{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="fb"><a href="../index.html#work">← Back to Forge</a><span>Marketing concept · campaign board</span></div>
+<div class="hero">
+  <div><small>Digital marketing · 30-day launch</small><h1>Bloom Café opens. <span>The city notices.</span></h1></div>
+  <div><p>A launch campaign concept for a new specialty café: a feed that looks like the café feels, Reels built around one-second hooks and a posting calendar that peaks on opening weekend.</p>
+  <div class="pill"><div><b>30</b><span>days of content</span></div><div><b>12</b><span>Reels planned</span></div><div><b>3</b><span>content pillars</span></div></div></div>
+</div>
+<div class="tabs"><button class="on" data-t="feed">Instagram feed</button><button data-t="reels">Reels storyboards</button><button data-t="cal">Content calendar</button></div>
+
+<section class="pane on" id="feed"><div class="feed">
+  <div class="ig">
+    <div class="igh"><span class="av"><i>B</i></span><span><b>bloomcafe.blr</b><span>Specialty coffee · bakes · flowers</span></span></div>
+    <p class="bio">☕ Slow coffee, fresh bakes &amp; flowers on every table<br>📍 Koramangala · opening 1 Nov<br>🌸 Tap below for the opening-week menu</p>
+    <div class="grid9" id="g9"></div>
+  </div>
+  <div>
+    <div class="det" id="det"></div>
+    <div class="pillars">
+      <div style="background:#ffd3e4"><b>Bloom moments</b><span>Flowers, light, the space</span></div>
+      <div style="background:#ffe1c4"><b>Behind the bar</b><span>Baristas, beans, bakes</span></div>
+      <div style="background:#e3dbff"><b>Your table</b><span>Regulars, UGC, offers</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="pane" id="reels"><div class="reels" id="rl"></div><p class="note">Each frame is ~1–2 seconds. Hooks are written for the first 0.8 seconds, before people scroll away.</p></section>
+
+<section class="pane" id="cal">
+  <div class="leg"><span><i style="background:#ffb3cf"></i>Reel</span><span><i style="background:#ffd29e"></i>Carousel</span><span><i style="background:#cdbfff"></i>Story</span><span><i style="background:#b9ecc1"></i>Offer / collab</span></div>
+  <div class="cal" id="calg"></div>
+  <div class="dd" id="dd">Tap a day to see the planned post.</div>
+  <p class="note">Concept plan. Targets and timings are set with the client before launch; ad spend is separate.</p>
+</section>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+var G=[
+ ["Opening\n1 Nov","linear-gradient(135deg,#ff6fa8,#ff9f43)","Reel","The countdown","3 days. 40 tables. One very good flat white.\nBloom opens 1 Nov in Koramangala 🌸\n\nSave this so you don't forget.","Hook: doors opening in slow motion"],
+ ["Our\nbeans","#2b1630","Carousel","Meet our beans","Swipe to meet the three farms behind our house blend, all from Chikmagalur. ☕","Educational · saves"],
+ ["","linear-gradient(160deg,#b9a3ff,#ffd3e4)","Reel","Flower wall time-lapse","8 hours, 2,000 stems, one wall. Come take the photo. 📸","Hook: empty wall → full bloom in 4s"],
+ ["Menu\ndrop","linear-gradient(135deg,#ff9f43,#ffd166)","Carousel","Opening-week menu","Everything we're pouring and baking in week one. Which one are you ordering first? 👇","Comment bait · question"],
+ ["Rose\nlatte","#ff6fa8","Reel","Signature drink pour","The rose cardamom latte. You'll want to film this one too.","Hook: latte art close-up"],
+ ["","#7bd389","Post","Meet the team","Say hi to Neel, Tara and Joe, the hands behind your coffee.","People-first · trust"],
+ ["Free\ncoffee","linear-gradient(135deg,#2b1630,#6b2d5c)","Offer","Opening weekend offer","First 50 people each day get a free cookie with any coffee. Show this post at the counter. 🍪","Offer · footfall"],
+ ["","linear-gradient(160deg,#ffd3e4,#ff9f43)","Reel","Day-in-the-life","6am to 10pm at Bloom, in 30 seconds.","Hook: alarm clock at 5:45am"],
+ ["Tag\nus","#b9a3ff","Story","UGC drive","Post your Bloom moment and tag @bloomcafe.blr. Best photo each week wins brunch for two.","UGC · community"]];
+$("#g9").innerHTML=G.map(function(g,i){return'<div class="t'+(g[2]==="Reel"?" r":"")+'" data-i="'+i+'" style="background:'+g[1]+'">'+g[0].replace(/\n/g,"<br>")+"</div>"}).join("");
+function det(i){var g=G[i];document.querySelectorAll(".t").forEach(function(t){t.classList.toggle("on",+t.dataset.i===i)});
+  $("#det").innerHTML="<small>Post "+(i+1)+" of 9 · "+g[2]+"</small><h2>"+g[3]+'</h2><div class="cap">'+g[4]+'</div><div class="meta"><span>'+g[5]+"</span><span>Pillar: "+(["Bloom moments","Behind the bar","Your table"][i%3])+"</span><span>Best time: "+(["8:30am","1pm","7:30pm"][i%3])+"</span></div>"}
+$("#g9").onclick=function(e){var t=e.target.closest(".t");if(t)det(+t.dataset.i)};det(0);
+var R=[
+ ["The first pour","Opening-day hero Reel",["#ff6fa8","Doors open, slow-mo","#ff9f43","Barista smile","#2b1630","Latte art, macro","#b9a3ff","Logo + 'Now open'"],"“POV: the café you'll live in just opened.”"],
+ ["2,000 stems","Flower wall time-lapse",["#b9a3ff","Bare wall","#ffd3e4","Hands placing stems","#ff6fa8","Half-full wall","#7bd389","Couple takes photo"],"“We made a wall you'll want to stand in front of.”"],
+ ["₹0 cookie","Opening weekend offer",["#ff9f43","Queue outside","#2b1630","Cookie fresh from oven","#ffd166","Counter handoff","#ff6fa8","Text: first 50 daily"],"“First 50 people today get this for free.”"]];
+$("#rl").innerHTML=R.map(function(r){var f="";for(var i=0;i<8;i+=2)f+='<div class="fr" style="background:'+r[2][i]+'"><i>0'+(i/2+1)+'</i>'+r[2][i+1]+"</div>";
+  return'<div class="reel"><h3>'+r[0]+"</h3><p>"+r[1]+'</p><div class="frames">'+f+'</div><div class="hook"><b>Hook:</b> '+r[3]+"</div></div>"}).join("");
+var types={R:["Reel","#ffb3cf"],C:["Carousel","#ffd29e"],S:["Story","#cdbfff"],O:["Offer","#b9ecc1"]};
+var plan="S C R S R C O S R C S R O R S C R S O C R S C R S R C O R S".split(" ");
+var ideas={R:["Countdown Reel","Signature drink pour","Flower wall time-lapse","Day in the life","Barista trick shot","Customer reactions"],C:["Meet our beans","Menu drop","How we brew","Top 5 orders"],S:["Poll: which drink?","Behind the scenes","Sneak peek","Q&A with the founder"],O:["Opening weekend offer","Collab with local bakery","UGC contest"]};
+var cnt={R:0,C:0,S:0,O:0};
+var h=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(function(d){return'<div class="dh">'+d+"</div>"}).join("");
+plan.forEach(function(p,i){var t=types[p],idea=ideas[p][cnt[p]++%ideas[p].length];h+='<button class="day" data-d="'+(i+1)+'" data-x="'+t[0]+" · "+idea+'"><b>'+(i+1)+'</b><span style="background:'+t[1]+'">'+idea+"</span></button>"});
+$("#calg").innerHTML=h;
+$("#calg").onclick=function(e){var d=e.target.closest(".day");if(!d)return;document.querySelectorAll(".day").forEach(function(x){x.classList.toggle("sel",x===d)});
+  $("#dd").innerHTML="<b>Day "+d.dataset.d+":</b> "+d.dataset.x+(+d.dataset.d===1?" · <b>Opening day</b>: boost with ₹ ad budget in a 3 km radius":"")};
+document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tabs button").forEach(function(x){x.classList.toggle("on",x===b)});document.querySelectorAll(".pane").forEach(function(p){p.classList.toggle("on",p.id===b.dataset.t)})}});
+})();
+</script>
+</body>
+</html>

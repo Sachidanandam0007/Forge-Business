@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Outreach Engine – Marketing concept by Forge</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Newsreader:ital,opsz@1,6..72&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0c0a;--pn:#141612;--pn2:#1c1f19;--ink:#f1f3ec;--mute:#8d928a;--lime:#a8ff32;--ln:#ffffff17;--pa:#f3f2ec}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.5 Archivo,system-ui,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+em{font-family:Newsreader,serif;font-style:italic;font-weight:400}
+.fb{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;font-size:14px}.fb a{font-weight:800}.fb span{color:var(--mute)}
+.head{max-width:1200px;margin:6px auto 30px;padding:0 24px}
+.head h1{font-size:clamp(38px,6vw,88px);line-height:.93;letter-spacing:-.055em;font-weight:800;max-width:900px}
+.head h1 em{color:var(--lime)}
+.head p{max-width:620px;color:#bfc4b9;margin-top:18px;font-size:17px}
+.g{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:380px 1fr;gap:22px;align-items:start}
+.box{background:var(--pn);border:1px solid var(--ln);border-radius:26px;padding:22px}
+.box h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:14px;display:flex;justify-content:space-between}
+label{display:block;font-size:13px;color:var(--mute);margin:10px 0 6px}
+input,textarea,select{width:100%;background:var(--pn2);border:1px solid var(--ln);border-radius:14px;padding:12px 14px;color:var(--ink);font:inherit;font-size:16px}
+textarea{min-height:70px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--lime)}
+.go{width:100%;margin-top:16px;background:var(--lime);color:#000;font-weight:800;border-radius:99px;padding:15px}
+.mail{background:var(--pa);color:#111;border-radius:22px;overflow:hidden}
+.mh{padding:14px 18px;border-bottom:1px solid #ddd;font-size:13.5px;color:#555}
+.mh div{padding:2px 0}.mh b{color:#111}
+.mb{padding:20px 18px;font-size:15.5px;line-height:1.6;white-space:pre-line;min-height:250px}
+.mb mark{background:#a8ff3266;padding:0 2px;border-radius:3px}
+.pas{display:flex;gap:6px;padding:0 18px 16px;flex-wrap:wrap}
+.pas span{font-size:12px;font-weight:800;border-radius:99px;padding:4px 10px}
+.wc{font-size:12.5px;color:#666;padding:0 18px 16px}
+.day{margin-top:22px}
+.tl{position:relative;height:74px;background:var(--pn2);border-radius:16px;margin:8px 0;overflow:hidden}
+.tl .h{position:absolute;top:0;bottom:0;border-left:1px dashed #ffffff1c;font-size:10.5px;color:var(--mute);padding:4px 0 0 4px}
+.tl .d{position:absolute;bottom:14px;width:9px;height:9px;margin-left:-4px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px #a8ff3288;animation:dp .3s backwards}
+@keyframes dp{from{opacity:0;transform:scale(0)}}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:13.5px;color:var(--mute)}
+.row button{border:1px solid var(--ln);border-radius:99px;padding:7px 14px;color:var(--ink)}
+.row button:hover{border-color:var(--lime)}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.kp div{background:var(--pn2);border-radius:16px;padding:12px}
+.kp small{font-size:11.5px;color:var(--mute)}.kp b{display:block;font-size:22px;letter-spacing:-.03em}
+.chk{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:14px}
+.chk div{display:flex;gap:10px;background:var(--pn2);border-radius:14px;padding:11px 12px}
+.chk i{color:var(--lime);font-style:normal;font-weight:800}
+.wide{max-width:1200px;margin:22px auto 60px;padding:0 24px}
+.note{font-size:12.5px;color:var(--mute);margin-top:12px}
+@media(max-width:980px){.g{grid-template-columns:1fr}}
+@media(max-width:600px){.kp,.chk{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="fb"><a href="../index.html#work">← Back to Forge</a><span>Marketing concept · live preview</span></div>
+<div class="head">
+  <h1>40 emails a day. <em>Each one written for one person.</em></h1>
+  <p>Our AI outreach engine reads each prospect's trigger event and pain point, writes a short Problem-Agitate-Solve email, and sends 40 a day at human-looking intervals to protect your domain. <b>Try it:</b> edit the prospect and generate.</p>
+</div>
+<div class="g">
+  <div class="box">
+    <h2><span>Prospect</span><span>1 of 40</span></h2>
+    <label for="pn">Name</label><input id="pn" value="Priya Sharma">
+    <label for="pc">Company</label><input id="pc" value="GreenLeaf Organics">
+    <label for="pp">Pain point</label><textarea id="pp">Customer queries on WhatsApp go unanswered after 7pm</textarea>
+    <label for="pt">Recent trigger event</label><textarea id="pt">Launched home delivery in 3 new cities last month</textarea>
+    <label for="po">Offer</label><select id="po"><option value="ai">AI agent for WhatsApp</option><option value="web">Website + booking</option><option value="app">Custom ordering app</option><option value="mkt">Local marketing</option></select>
+    <button class="go" id="gen">Write the email →</button>
+  </div>
+  <div>
+    <div class="mail">
+      <div class="mh"><div>To: <b id="to"></b></div><div>Subject: <b id="sub"></b></div></div>
+      <div class="mb" id="body"></div>
+      <div class="pas"><span style="background:#ffe1e1">Problem</span><span style="background:#ffefc9">Agitate</span><span style="background:#dcffc0">Solve</span><span style="background:#e4e4ff">One soft CTA</span></div>
+      <div class="wc" id="wc"></div>
+    </div>
+    <div class="box day">
+      <h2><span>Today's send schedule</span><span id="cnt">0 / 40</span></h2>
+      <div class="row"><span>Random 4–12 minute gaps, starting 9am, never more than 40</span><button id="rr">↻ Re-roll day</button></div>
+      <div class="tl" id="tl"></div>
+      <div class="kp"><div><small>Daily cap</small><b>40</b></div><div><small>Gap</small><b>4–12 min</b></div><div><small>Finishes</small><b id="fin">—</b></div><div><small>Format</small><b>Plain text</b></div></div>
+    </div>
+  </div>
+</div>
+<div class="wide"><div class="box"><h2><span>Deliverability built in</span></h2>
+  <div class="chk"><div><i>✓</i>Separate sending domain with SPF, DKIM, DMARC</div><div><i>✓</i>2–3 week warm-up from 5/day to 40/day</div><div><i>✓</i>No links or images in first email</div><div><i>✓</i>One-click unsubscribe + suppression list</div><div><i>✓</i>Never emails the same person twice</div><div><i>✓</i>Stops automatically on SMTP warnings</div></div>
+  <p class="note">This page uses a fixed template to preview the structure. In production each email is written individually by AI (Gemini, with Groq as backup) from the prospect's data, then checked for length and spam words before sending.</p>
+</div></div>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+var OF={ai:["an AI agent that replies on WhatsApp in seconds, day or night","answer every query instantly"],web:["a fast website with online booking","turn visitors into bookings"],app:["a simple ordering app for repeat customers","make reordering one tap"],mkt:["local SEO and Instagram that bring nearby customers in","show up where people search"]};
+function esc(s){return s.replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function low(s){s=s.trim().replace(/\.$/,"");return s.charAt(0).toLowerCase()+s.slice(1)}
+function gen(){
+  var n=$("#pn").value.trim()||"there",f=n.split(" ")[0],c=$("#pc").value.trim()||"your company",p=low($("#pp").value||"slow replies"),t=low($("#pt").value||"growing fast"),o=OF[$("#po").value];
+  $("#to").textContent=n+" <"+f.toLowerCase()+"@"+c.toLowerCase().replace(/[^a-z]/g,"")+".com>";
+  $("#sub").textContent=("quick idea for "+c).toLowerCase();
+  var body="Hi "+esc(f)+",\n\n<mark>Saw that "+esc(c)+" "+esc(t)+". Congrats.</mark> Growth like that usually means "+esc(p)+".\n\n<mark>Every one of those is a customer who was ready to buy and went somewhere else instead.</mark>\n\n<mark>We build "+o[0]+", so you can "+o[1]+" without hiring for it.</mark>\n\nWorth a 15-minute look next week?\n\nSachin\nForge";
+  $("#body").innerHTML="";var plain=body.replace(/<[^>]+>/g,""),i=0;
+  (function type(){i+=6;var cut=plain.slice(0,i);$("#body").textContent=cut;if(i<plain.length)setTimeout(type,12);else $("#body").innerHTML=body})();
+  var words=plain.split(/\s+/).length;$("#wc").textContent=words+" words · reading time ~"+Math.max(15,Math.round(words/4))+" sec · no links, no images";
+}
+function day(){var tl=$("#tl"),W=tl.clientWidth||600,start=9*60,end=start,h="",ts=[];
+  for(var i=0;i<40;i++){end+=i?4+Math.random()*8:0;ts.push(end)}
+  var span=ts[39]-start+30;
+  for(var hr=9;hr<=Math.ceil((start+span)/60);hr++)h+='<span class="h" style="left:'+((hr*60-start)/span*100)+'%">'+(hr>12?hr-12+"pm":hr+(hr===12?"pm":"am"))+"</span>";
+  ts.forEach(function(t,i){h+='<i class="d" style="left:'+((t-start)/span*100)+"%;bottom:"+(10+(i%3)*14)+"px;animation-delay:"+i*.03+'s"></i>'});
+  tl.innerHTML=h;$("#cnt").textContent="40 / 40";var e=ts[39],hh=Math.floor(e/60),mm=Math.round(e%60);$("#fin").textContent=(hh>12?hh-12:hh)+":"+(mm<10?"0":"")+mm+(hh>=12?"pm":"am")}
+$("#gen").onclick=gen;$("#rr").onclick=day;gen();day();addEventListener("resize",day);
+})();
+</script>
+</body>
+</html>
