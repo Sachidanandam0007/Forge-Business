@@ -4,7 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#000000">
-<title>Forge – Premium Portfolio &amp; Business Websites</title>
+<title>Forge – Websites, Apps, AI Agents &amp; Digital Marketing</title>
+<!-- [Forge add-on] SEO + social sharing -->
+<meta name="description" content="Forge is one studio for websites, custom apps, AI agents and digital marketing. Portfolios from ₹999, apps, AI assistants and growth plans for businesses in India.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Forge – Websites, Apps, AI Agents &amp; Marketing">
+<meta property="og:description" content="Portfolio websites from ₹999. Custom apps, AI agents and digital marketing for businesses. Get an instant estimate.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Forge","description":"Portfolio and business websites, custom apps, AI agents and digital marketing.","email":"anandamsachin@gmail.com","telephone":"+91-86374-09160","areaServed":"IN","priceRange":"₹999 – ₹1,49,999","sameAs":["https://www.linkedin.com/in/sachidanandam-r-63061822b/","https://www.instagram.com/s_x_c_x_i_x"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -150,6 +159,195 @@ footer a{color:#fff}
 @media(max-width:600px){section{padding:90px 0}.cg,.steps{grid-template-columns:1fr}.badge{display:none}.top{padding:16px}.card{position:relative;top:0}.tabs button{padding:12px 18px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.ln>span,.rv{transform:none;opacity:1}.man .w{opacity:1}.load{display:none}.card{position:relative;top:0}}
 </style>
+<style id="forge-addons">
+/* ===== [Forge add-on] New services, extra pricing, quote builder, FAQ, Forge AI chat.
+   Everything above is your original stylesheet, unchanged. New classes are prefixed xs-/xq-/xf-/fa-. ===== */
+.menu a{font-size:clamp(40px,min(9vw,11.5vh),120px)} /* keeps 7 menu links on screen on short laptops */
+/* services */
+.xs-head{display:flex;justify-content:space-between;gap:40px;align-items:flex-end;margin-bottom:70px;flex-wrap:wrap}
+.xs-head p{max-width:440px;color:#c4c8c0}
+.xs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:90px}
+.xs{position:relative;isolation:isolate;overflow:hidden;border:1px solid var(--line);border-radius:34px;padding:clamp(26px,3vw,40px);background:#141712;display:flex;flex-direction:column;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.xs:hover{transform:translateY(-10px);box-shadow:0 40px 70px -30px rgba(168,255,50,.25)}
+.xs:before{content:"";position:absolute;z-index:-1;width:240px;height:240px;border-radius:50%;background:var(--lime);filter:blur(70px);opacity:.28;right:-90px;top:-100px;transition:opacity .5s}
+.xs:hover:before{opacity:.5}
+.xs.lm{background:var(--lime);color:#000;border-color:var(--lime)}.xs.lm:before{background:#fff;opacity:.5}
+.xs.lt{background:var(--paper);color:#000;border-color:#ddd}
+.xs .no{font-family:var(--i);font-style:italic;font-size:24px;color:var(--lime)}.xs.lm .no,.xs.lt .no{color:#3c4a31}
+.xs h3{font-size:clamp(34px,3.4vw,54px);font-weight:800;letter-spacing:-.06em;line-height:.95;margin:16px 0}
+.xs>p{opacity:.8;margin-bottom:22px}
+.xs ul{list-style:none;border-top:1px solid var(--line);margin-bottom:24px;flex:1}
+.xs li{padding:11px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:15px}
+.xs.lm ul,.xs.lm li,.xs.lt ul,.xs.lt li{border-color:rgba(0,0,0,.14)}
+.xs .fr{display:flex;align-items:baseline;gap:8px;margin-bottom:20px;font-size:14px}
+.xs .fr span{opacity:.7}.xs .fr b{font-size:30px;letter-spacing:-.05em}
+.xs .btn{justify-content:center}
+.xs.lm .btn,.xs.lt .btn{background:#000;color:#fff;border-color:#000}
+.xs.lm .btn:hover{background:#fff;color:#000;border-color:#fff}
+.xs.lt .btn:hover{background:var(--lime);color:#000;border-color:var(--lime)}
+/* extra pricing (own classes so the original pricing tabs never touch it) */
+.pp{display:none}.pp.on{display:block}
+.subt{display:flex;gap:8px;margin:-24px 0 28px;flex-wrap:wrap}
+.subt button{border:1.5px solid #000;background:none;border-radius:99px;padding:9px 18px;font:700 14px var(--s);cursor:pointer;color:#000;transition:background .3s,color .3s}
+.subt button.on{background:#000;color:#fff}
+/* hero: four services row */
+.hsv{display:grid;grid-template-columns:repeat(4,1fr);max-width:min(760px,64%);margin-top:44px;border-top:1px solid var(--line)}
+.hsv a{padding:16px 16px 0 0;display:block;transition:color .3s}
+.hsv a+a{padding-left:16px;border-left:1px solid var(--line)}
+.hsv i{font-family:var(--i);font-size:15px;color:var(--lime);display:block}
+.hsv b{display:block;font-size:17px;letter-spacing:-.03em;margin:2px 0}
+.hsv span{font-size:13px;color:var(--mute)}
+.hsv a:hover b{color:var(--lime)}
+/* work: four tabs, three cards each */
+.tabs.dk{background:#1b1f17;margin:0 0 50px}
+.tabs.dk button{color:#c4c8c0}.tabs.dk button.on{color:#000}
+.tabs.dk .pill{background:var(--lime)}
+.wk{display:none}.wk.on{display:block;animation:wkin .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes wkin{from{opacity:0;transform:translateY(24px)}}
+.shot.pf:before{background:#ff4f8f}
+/* mini mockups inside work cards */
+.shot .mk{position:absolute;z-index:1;font-family:var(--s);line-height:1.3;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.shot .mk p{margin:0;opacity:1;max-width:none}
+.shot .mk b{font-size:inherit;letter-spacing:normal;line-height:inherit;position:static}
+.shot .mk small{position:static;letter-spacing:.1em;opacity:.7}
+.card:hover .shot .mk{transform:translateY(-6px)}
+.mk-ph{top:22px;right:26px;width:170px;height:250px;border-radius:26px;background:#f7ecdc;color:#2a1a10;border:6px solid #0d0805;padding:26px 12px 12px;font-size:11px;box-shadow:0 30px 50px -20px #000}
+.mk-ph .nt{position:absolute;top:6px;left:50%;width:54px;height:12px;margin-left:-27px;border-radius:9px;background:#0d0805}
+.mk-ph u{text-decoration:none;font-weight:800;font-size:14px;display:block;margin-bottom:8px}
+.mk-ph .hc{background:linear-gradient(135deg,#3b2213,#6b3a17);color:#f7ecdc;border-radius:12px;padding:10px;font-weight:700;margin-bottom:8px!important}
+.mk-ph .ln2{display:flex;justify-content:space-between;background:#fffaf2;border-radius:10px;padding:8px;margin-bottom:6px!important}
+.mk-ph .ln2 em{font-family:var(--s);font-style:normal;font-weight:800}
+.mk-ph .bt{background:#2f6b3c;color:#fff;border-radius:10px;padding:8px;text-align:center;font-weight:800}
+.mk-tk{top:26px;right:26px;width:210px;border-radius:20px;background:linear-gradient(150deg,#0f766e,#0b4f49);color:#fff;padding:16px;text-align:center;box-shadow:0 30px 50px -20px #0b2e2a}
+.mk-tk b{display:block;font-size:52px!important;font-weight:800;letter-spacing:-.04em!important;line-height:1.05!important}
+.mk-tk p{display:flex;justify-content:space-between;font-size:12px;margin:8px 0!important}
+.mk-tk em{font-family:var(--s);font-style:normal;color:#5eead4;font-weight:800}
+.mk-tk i{display:block;height:6px;border-radius:9px;background:#ffffff33;overflow:hidden}.mk-tk s{display:block;height:100%;background:#5eead4}
+.mk-bars{top:24px;right:24px;width:230px;border-radius:18px;background:#1d1b4b;color:#f4f3ff;padding:14px;box-shadow:0 30px 50px -20px #000}
+.mk-bars p{display:flex;justify-content:space-between;align-items:baseline;font-size:12px}
+.mk-bars p b{font-size:20px!important;color:#ffd23f}
+.mk-bars div{display:flex;align-items:flex-end;gap:6px;height:90px;margin-top:10px}
+.mk-bars div i{flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(#ffd23f,#ffb100)}
+.mk-chat{top:22px;right:22px;width:230px;display:flex;flex-direction:column;gap:6px;font-size:12px}
+.mk-chat p{padding:8px 11px;border-radius:14px;max-width:88%!important}
+.mk-chat .a{background:#eef2fb;color:#0f1b33;align-self:flex-start;border-bottom-left-radius:4px}
+.mk-chat .u{background:#2563eb;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.mk-chat .ok{background:#dcfce7;color:#166534;font-weight:800;align-self:flex-start}
+.mk-crm{top:24px;right:24px;width:230px;font-size:12px}
+.mk-crm p{display:flex;justify-content:space-between;align-items:center;background:#fff;color:#1c1712;border-radius:12px 12px 0 0;padding:10px 12px 2px}
+.mk-crm p b{font-size:14px!important}
+.mk-crm em{font-family:var(--s);font-style:normal;font-weight:800;color:#fff;background:#c2410c;border-radius:99px;padding:1px 8px}.mk-crm em.w{background:#d97706}
+.mk-crm span{display:block;background:#fff;color:#7b7064;border-radius:0 0 12px 12px;padding:2px 12px 10px;margin-bottom:8px}
+.mk-code{top:24px;right:24px;width:260px;border-radius:16px;background:#0b1220;color:#93c5fd;padding:14px;font:500 11.5px/1.7 ui-monospace,Menlo,Consolas,monospace!important}
+.mk-code s{text-decoration:none;color:#ff7a59}.mk-code .r{color:#86efac;margin-bottom:6px!important}
+.mk-grid{top:24px;right:24px;width:210px;display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:12px;overflow:hidden;box-shadow:0 30px 50px -20px #000}
+.mk-grid i{aspect-ratio:1;display:block}
+.mk-serp{top:24px;right:24px;width:250px;background:#fff;color:#202124;border-radius:16px;padding:12px;font-size:12px;box-shadow:0 20px 40px -20px #0005}
+.mk-serp .q{border:1px solid #dfe1e5;border-radius:99px;padding:6px 10px;margin-bottom:8px!important}
+.mk-serp p:not(.q){padding:7px 4px;border-top:1px solid #eee}
+.mk-serp p b{display:block;color:#1a0dab;font-size:13px!important}
+.mk-serp .us{background:#f1faf4;border-radius:8px}.mk-serp p span{color:#70757a}
+.mk-mail{top:24px;right:24px;width:250px;background:#f3f2ec;color:#111;border-radius:16px;padding:12px;font-size:12px}
+.mk-mail .m{margin:6px 0 10px!important;line-height:1.45}
+.mk-mail div{display:flex;gap:4px}.mk-mail div i{flex:1;height:8px;border-radius:9px;background:var(--lime)}
+@media(max-width:1000px){.shot{min-height:340px}}
+@media(max-width:760px){.badge{display:none}.hsv{max-width:none;grid-template-columns:1fr 1fr}.hsv a:nth-child(3){padding-left:0;border-left:0}.hsv a:nth-child(n+3){border-top:1px solid var(--line);margin-top:12px}}
+@media(max-width:600px){.tabs{display:flex;max-width:100%}.tabs button{padding:11px 9px;font-size:13.5px;flex:1 1 auto;white-space:nowrap}.shot .mk{transform:scale(.88);transform-origin:top right}}
+.plan .pr small{font-size:18px;font-weight:600;letter-spacing:-.02em;color:#6b7068}.plan.hi .pr small{color:#b8bdb2}
+.plan .pm{font-size:14px;font-weight:700;margin:-4px 0 14px;color:#4a5a3f}.plan.hi .pm{color:var(--lime)}
+.xnote{margin-top:26px;color:#6b7068;font-size:14px}
+/* quote builder */
+.xq{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:start;margin-top:70px}
+.xq-svc{border-top:1px solid var(--line)}.xq-svc:last-child{border-bottom:1px solid var(--line)}
+.xq-head{width:100%;display:flex;align-items:center;gap:24px;padding:28px 0;background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.xq-head i{font-family:var(--i);font-size:22px;color:var(--mute);width:34px;flex:none}
+.xq-head h3{flex:1;font-size:clamp(28px,3.6vw,52px);font-weight:800;letter-spacing:-.055em;line-height:1;transition:color .3s}
+.xq-tog{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:24px;flex:none;transition:transform .4s,background .3s,color .3s,border-color .3s}
+.xq-svc.on .xq-tog{transform:rotate(45deg);background:var(--lime);color:#000;border-color:var(--lime)}
+.xq-svc.on .xq-head h3{color:var(--lime)}
+.xq-body{display:none;padding:0 0 30px 58px}.xq-svc.on .xq-body{display:block}
+.xq-lab{display:block;font-family:var(--i);font-style:italic;font-size:19px;color:var(--mute);margin:4px 0 12px}
+.xq-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.xq-chip{position:relative}
+.xq-chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.xq-chip span{display:inline-flex;gap:8px;align-items:center;border:1.5px solid var(--line);border-radius:99px;padding:10px 16px;font-size:14px;font-weight:700;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.xq-chip span small{font-size:13px;font-weight:600;opacity:.65}
+.xq-chip:hover span{border-color:var(--w)}
+.xq-chip input:checked+span{background:var(--lime);border-color:var(--lime);color:#000}
+.xq-chip input:focus-visible+span{outline:2px solid var(--lime);outline-offset:3px}
+.xq-sum{position:sticky;top:100px;background:var(--lime);color:#000;border-radius:30px;padding:clamp(24px,3vw,36px)}
+.xq-sum .lab{color:#000;margin-bottom:10px}
+.xq-lines{list-style:none;margin:0 0 18px;border-top:1px solid rgba(0,0,0,.18)}
+.xq-lines li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.18);font-size:14px;font-weight:600}
+.xq-lines li span:last-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.xq-lines li.empty{opacity:.65}
+.xq-tot{font-size:clamp(44px,5vw,68px);font-weight:800;letter-spacing:-.07em;line-height:1;font-variant-numeric:tabular-nums}
+.xq-mo{font-weight:700;margin-top:8px;min-height:24px}
+.xq-speed{display:flex;gap:6px;background:rgba(0,0,0,.08);border-radius:99px;padding:4px;margin:18px 0}
+.xq-speed label{flex:1;position:relative}
+.xq-speed input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.xq-speed span{display:block;text-align:center;padding:9px;border-radius:99px;font-weight:700;font-size:14px;cursor:pointer}
+.xq-speed input:checked+span{background:#000;color:#fff}
+.xq-speed input:focus-visible+span{outline:2px solid #000;outline-offset:2px}
+.xq-f{display:grid;gap:10px}
+.xq-f input,.xq-f textarea{width:100%;border:1.5px solid rgba(0,0,0,.2);background:rgba(255,255,255,.55);border-radius:16px;padding:14px 16px;font:600 16px var(--s);color:#000}
+.xq-f textarea{min-height:80px;resize:vertical}
+.xq-f input:focus,.xq-f textarea:focus{outline:none;border-color:#000;background:#fff}
+.xq-f .btn{justify-content:center;width:100%;cursor:pointer;font-family:var(--s);font-size:16px}
+.xq-f .btn.d:hover{background:#fff;color:#000;border-color:#fff}
+.xq-f .btn.gh{background:transparent;color:#000;border-color:#000}.xq-f .btn.gh:hover{background:#000;color:var(--lime)}
+.xq-err{font-size:14px;font-weight:700;color:#7a0000}
+.xq-note{font-size:12.5px;opacity:.7;margin-top:12px}
+/* FAQ */
+.xf{max-width:1000px;margin-top:60px}
+.xf details{border-top:1px solid #d6d4ca}.xf details:last-child{border-bottom:1px solid #d6d4ca}
+.xf summary{list-style:none;display:flex;justify-content:space-between;gap:24px;align-items:center;padding:28px 0;cursor:pointer;font-size:clamp(22px,2.6vw,34px);font-weight:700;letter-spacing:-.04em;line-height:1.1}
+.xf summary::-webkit-details-marker{display:none}
+.xf summary:after{content:"+";flex:none;width:44px;height:44px;border-radius:50%;background:#000;color:var(--lime);display:grid;place-items:center;font-size:24px;font-weight:600;transition:transform .4s}
+.xf details[open] summary:after{transform:rotate(45deg)}
+.xf details p{padding:0 70px 28px 0;color:#4d524a;font-size:17px;max-width:780px}
+.xf a{text-decoration:underline}
+/* Forge AI chat */
+.fa-btn{position:fixed;right:22px;bottom:22px;z-index:105;width:64px;height:64px;border-radius:50%;border:0;background:var(--lime);color:#000;cursor:pointer;display:grid;place-items:center;box-shadow:0 18px 40px -12px rgba(168,255,50,.55);transition:transform .3s}
+.fa-btn:hover{transform:scale(1.08)}
+.fa-btn svg{width:28px;animation:spin 12s linear infinite}
+.fa-btn .dot{position:absolute;top:3px;right:3px;width:15px;height:15px;border-radius:50%;background:#ff4d3d;border:2px solid #000}
+.fa-tip{position:fixed;right:98px;bottom:36px;z-index:105;max-width:230px;background:#fff;color:#000;border-radius:18px 18px 4px 18px;padding:12px 16px;font-weight:700;font-size:14px;line-height:1.3;box-shadow:0 20px 40px -15px rgba(0,0,0,.6);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .4s,transform .4s;cursor:pointer;border:0;text-align:left;font-family:var(--s)}
+.fa-tip.show{opacity:1;transform:none;pointer-events:auto}
+.fa{position:fixed;right:22px;bottom:100px;z-index:106;width:min(400px,calc(100vw - 32px));height:min(600px,calc(100svh - 190px));display:flex;flex-direction:column;background:#0b0d09;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 40px 90px -20px rgba(0,0,0,.85);transform-origin:bottom right;transform:scale(.85) translateY(20px);opacity:0;visibility:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s,visibility .45s}
+.fa.open{transform:none;opacity:1;visibility:visible}
+.fa-h{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--lime);color:#000}
+.fa-av{width:40px;height:40px;border-radius:50%;background:#000;color:var(--lime);display:grid;place-items:center;flex:none}
+.fa-av svg{width:20px;animation:spin 12s linear infinite}
+.fa-h b{display:block;font-size:17px;letter-spacing:-.03em;line-height:1.2}
+.fa-h small{font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:6px;opacity:.75}
+.fa-h small:before{content:"";width:7px;height:7px;border-radius:50%;background:#0a7a2f}
+.fa-x{margin-left:auto;background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:#000;width:38px;height:38px;border-radius:50%}
+.fa-x:hover{background:rgba(0,0,0,.1)}
+.fa-log{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;overscroll-behavior:contain}
+.fa-m{max-width:88%;padding:11px 15px;border-radius:20px;font-size:14.5px;line-height:1.45;overflow-wrap:anywhere}
+.fa-m.b{background:#1b1f17;border-bottom-left-radius:6px;align-self:flex-start}
+.fa-m.u{background:var(--lime);color:#000;border-bottom-right-radius:6px;align-self:flex-end;font-weight:600}
+.fa-m a{color:var(--lime);text-decoration:underline}
+.fa-typ{display:flex;gap:4px;padding:5px 2px}
+.fa-typ i{width:7px;height:7px;border-radius:50%;background:var(--mute);animation:fab 1s infinite}
+.fa-typ i:nth-child(2){animation-delay:.15s}.fa-typ i:nth-child(3){animation-delay:.3s}
+@keyframes fab{0%,60%,100%{transform:none;opacity:.4}30%{transform:translateY(-4px);opacity:1}}
+.fa-q{display:flex;gap:6px;overflow-x:auto;padding:0 14px 12px;scrollbar-width:none}
+.fa-q::-webkit-scrollbar{display:none}
+.fa-q button{flex:none;border:1px solid var(--line);background:none;color:var(--w);border-radius:99px;padding:7px 13px;font:600 13px var(--s);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.fa-q button:hover{background:var(--lime);color:#000;border-color:var(--lime)}
+.fa-f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.fa-f input{flex:1;min-width:0;background:#141712;border:1px solid var(--line);border-radius:99px;padding:13px 18px;color:#fff;font:500 16px var(--s)}
+.fa-f input:focus{outline:none;border-color:var(--lime)}
+.fa-f button{width:48px;height:48px;border-radius:50%;border:0;background:var(--lime);color:#000;cursor:pointer;display:grid;place-items:center;flex:none}
+.fa-f button:disabled{opacity:.5;cursor:default}
+.fa-foot{font-size:11px;color:var(--mute);text-align:center;padding:0 12px 10px}
+@media(max-width:1000px){.xq{grid-template-columns:1fr}.xq-sum{position:relative;top:0}}
+@media(max-width:600px){.xq-body{padding-left:0}.xq-head{gap:14px}.xf details p{padding-right:0}
+  .fa{right:0;bottom:0;width:100%;height:88svh;border-radius:26px 26px 0 0}.fa.open~.fa-btn,.fa.open~.fa-tip{display:none}
+  .fa-btn{right:16px;bottom:16px;width:58px;height:58px}.fa-tip{right:84px;bottom:26px}}
+</style>
 </head>
 <body>
 <div class="load" id="load"><span>Forge</span><b id="cnt">0</b></div>
@@ -164,6 +362,7 @@ footer a{color:#fff}
   <a href="#work"><span>Our <em>work</em></span></a>
   <a href="#build"><span>What we <em>build</em></span></a>
   <a href="#pricing"><span><em>Pricing</em></span></a>
+  <a href="#quote"><span>Get a <em>quote</em></span></a>
   <a href="#process"><span>The <em>process</em></span></a>
   <a href="#contact"><span>Let’s <em>talk</em></span></a>
 </nav>
@@ -172,11 +371,17 @@ footer a{color:#fff}
 <section class="hero" id="top">
   <div class="wrap">
     <svg class="star" id="star" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M50 0l9 34 31-17-17 31 34 9-34 9 17 31-31-17-9 34-9-34-31 17 17-31-34-9 34-9-17-31 31 17z"/></svg>
-    <span class="lab">(Portfolio &amp; business websites)</span>
-    <h1><span class="ln"><span>Your work</span></span><span class="ln"><span>deserves a</span></span><span class="ln"><span>better <em>first impression.</em></span></span></h1>
-    <p class="rv">We turn resumes, projects and achievements into polished personal portfolio websites, and help businesses get a clean, credible site of their own.</p>
-    <div class="acts rv"><a class="btn l" href="#pricing" data-mag>Get a portfolio — ₹999</a><a class="btn" href="#work" data-mag>See our work</a></div>
-    <svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#c" textLength="284" lengthAdjust="spacing">Now booking • ₹999 portfolio •</textPath></text></svg>
+    <span class="lab">(Websites · Apps · AI agents · Marketing)</span>
+    <h1><span class="ln"><span>Build it.</span></span><span class="ln"><span>Automate it.</span></span><span class="ln"><span><em>Grow it.</em></span></span></h1>
+    <p class="rv">Forge is one studio for everything your business does online. We design websites, build custom apps, deploy AI agents and run the marketing that brings customers in, all forged to work together.</p>
+    <div class="acts rv"><a class="btn l" href="#quote" data-mag>Get an instant quote →</a><a class="btn" href="#work" data-mag>See our work</a></div>
+    <div class="hsv rv">
+      <a href="#pricing" data-pt="pw"><i>01</i><b>Websites</b><span>from ₹999</span></a>
+      <a href="#pricing" data-pt="pa"><i>02</i><b>Custom apps</b><span>from ₹24,999</span></a>
+      <a href="#pricing" data-pt="pi"><i>03</i><b>AI agents</b><span>from ₹9,999</span></a>
+      <a href="#pricing" data-pt="pm"><i>04</i><b>Marketing</b><span>from ₹7,999/mo</span></a>
+    </div>
+    <svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#c" textLength="284" lengthAdjust="spacing">Web • Apps • AI • Growth • Forge •</textPath></text></svg>
     <span class="scr">Scroll</span>
   </div>
   <div class="mq" data-mq="1"><div class="mt"></div></div>
@@ -184,22 +389,23 @@ footer a{color:#fff}
 
 <section class="light">
   <div class="wrap">
-    <span class="lab">(Why a website)</span>
-    <p class="man" id="man">Most people send a PDF and hope. We think your work should walk into the room before you do. A site that shows who you are, what you built and why you are worth a call.</p>
+    <span class="lab">(Why one studio)</span>
+    <p class="man" id="man">Most businesses juggle a web designer, an app agency, a chatbot tool and a marketer. We think it should be one team. A site that earns trust, an app that works, an AI that answers at 2am and marketing that brings people in.</p>
   </div>
 </section>
 
 <section class="light" style="padding-top:0">
   <div class="wrap"><div class="def rv">
     <div><span class="lab" style="color:#000">(Definition)</span><h3>Forge</h3></div>
-    <div><small>\ forj \ verb</small><p>1. To shape raw material (a resume, a project, a business) into something that lasts and shows well.</p><small>syn. build · shape · craft.</small></div>
+    <div><small>\ forj \ verb</small><p>1. To shape raw material (an idea, a resume, a business) into websites, apps, AI and growth that last.</p><small>syn. build · automate · grow.</small></div>
   </div></div>
 </section>
 
 <section class="work" id="work">
   <div class="wrap">
-    <div class="wh"><div><span class="lab">(Our work)</span><h2>Three sites, <em>three stories.</em></h2></div><p>A personal portfolio, a product presentation site and a B2B supply-chain concept. Whatever you are looking for, we have built something close.</p></div>
-    <div id="stack">
+    <div class="wh"><div><span class="lab">(Our work)</span><h2>Twelve builds, <em>four crafts.</em></h2></div><p>Three live websites, plus interactive concept builds for apps, AI agents and marketing. Open any of them and try it yourself.</p></div>
+    <div class="tabs dk" id="wtabs"><span class="pill" id="wpill"></span><button class="on" data-w="w1">Websites</button><button data-w="w2">Apps</button><button data-w="w3">AI Agents</button><button data-w="w4">Marketing</button></div>
+    <div class="wk on" id="w1">
       <article class="card" style="--n:0" data-cur>
         <div><span class="no">01 / Personal brand</span><h3>Personal Portfolio</h3><p>A strategic personal site combining experience, positioning and project case studies.</p><div class="tg"><span>Case studies</span><span>Achievements</span></div><a class="btn l" href="https://sachidanandam0007.github.io/portfolio/" target="_blank" rel="noopener">View live ↗</a></div>
         <div class="shot"><small>Product Engineering · Marketing · Sustainability</small><b>Sachidanandam</b></div>
@@ -209,38 +415,149 @@ footer a{color:#fff}
         <div class="shot"><small>Brand presentation · Product storytelling</small><b>Haemi Chips</b></div>
       </article>
       <article class="card" style="--n:2" data-cur>
-        <div><span class="no">03 / B2B · UX</span><h3>UPHOPRO</h3><p>A Wix-designed B2B concept connecting leather upholstery businesses with supply-chain, networking and industry insight tools.</p><div class="tg"><span>Inventory</span><span>Networking</span></div><a class="btn l" href="https://anandamsachin.wixsite.com/uphopro-1" target="_blank" rel="noopener">View live ↗</a></div>
-        <div class="shot"><small>Leather upholstery · Supply chain · B2B</small><b>UPHOPRO</b></div>
+        <div><span class="no">03 / Brand redesign</span><h3>The Pure Food Co</h3><p>A cinematic redesign concept for a nutrition brand making texture-modified meals for healthier ageing, with scroll storytelling, a product explorer and an interactive globe.</p><div class="tg"><span>Redesign concept</span><span>Storytelling</span><span>Interactive</span></div><a class="btn l" href="work/pure-food-co.html" target="_blank" rel="noopener">View live ↗</a></div>
+        <div class="shot pf"><small>Nutrition · Aged care · Storytelling</small><b>The Pure Food Co</b></div>
+      </article>
+    </div>
+
+    <!-- Apps -->
+    <div class="wk" id="w2">
+      <article class="card" style="--n:0" data-cur>
+        <div><span class="no">01 / Order-ahead app</span><h3>ChaiCart</h3><p>Customers skip the café queue: browse the menu, customise their chai, pay by UPI and track the order to the counter with a live token.</p><div class="tg"><span>App concept</span><span>UPI checkout</span><span>Live tracking</span></div><a class="btn l" href="work/chaicart.html" target="_blank" rel="noopener">Open demo ↗</a></div>
+        <div class="shot"><div class="mk mk-ph"><i class="nt"></i><u>Good morning</u><p class="hc">Masala chai<br>in 4 min</p><p class="ln2"><span>☕ Masala Chai</span><em>₹40</em></p><p class="ln2"><span>🏺 Kulhad Chai</span><em>₹50</em></p><p class="bt">Pay with UPI</p></div><small>Café · Android &amp; iOS · UPI</small><b>ChaiCart</b></div>
+      </article>
+      <article class="card lt" style="--n:1" data-cur>
+        <div><span class="no">02 / Patient + front desk</span><h3>ClinicQ</h3><p>Patients book a slot and watch the queue move live from home. The front desk calls the next patient from one screen and WhatsApp alerts do the rest.</p><div class="tg"><span>App concept</span><span>Bookings</span><span>Live queue</span></div><a class="btn d" href="work/clinicq.html" target="_blank" rel="noopener">Open demo ↗</a></div>
+        <div class="shot"><div class="mk mk-tk"><small>Your token</small><b>#14</b><p><span>Now serving <em>#11</em></span><span>~18 min</span></p><i><s style="width:62%"></s></i></div><small>Healthcare · Booking · Queue</small><b>ClinicQ</b></div>
+      </article>
+      <article class="card" style="--n:2" data-cur>
+        <div><span class="no">03 / Billing &amp; stock</span><h3>KiranaBooks</h3><p>A billing and inventory app for local stores: tap to bill, take cash, UPI or udhaar, and get the day's summary on WhatsApp.</p><div class="tg"><span>App concept</span><span>POS billing</span><span>Inventory</span></div><a class="btn l" href="work/kiranabooks.html" target="_blank" rel="noopener">Open demo ↗</a></div>
+        <div class="shot"><div class="mk mk-bars"><p><span>Today's sales</span><b>₹14,280</b></p><div><i style="height:45%"></i><i style="height:62%"></i><i style="height:38%"></i><i style="height:80%"></i><i style="height:56%"></i><i style="height:92%"></i></div></div><small>Retail · Billing · Inventory</small><b>KiranaBooks</b></div>
+      </article>
+    </div>
+
+    <!-- AI agents -->
+    <div class="wk" id="w3">
+      <article class="card lt" style="--n:0" data-cur>
+        <div><span class="no">01 / AI receptionist</span><h3>SmileLine</h3><p>An AI receptionist for a dental clinic that answers questions about treatments and fees, then books the appointment, in English or Hindi.</p><div class="tg"><span>AI agent concept</span><span>Bookings</span><span>Bilingual</span></div><a class="btn d" href="work/smileline.html" target="_blank" rel="noopener">Open demo ↗</a></div>
+        <div class="shot"><div class="mk mk-chat"><p class="a">Hi! I'm Riya. How can I help?</p><p class="u">Book a cleaning tomorrow</p><p class="a">Open slots: 10:30 · 12:00 · 4:15</p><p class="ok">✓ Booked · WhatsApp sent</p></div><small>Healthcare · Website chat</small><b>SmileLine</b></div>
+      </article>
+      <article class="card" style="--n:1" data-cur>
+        <div><span class="no">02 / WhatsApp lead agent</span><h3>NestFinder</h3><p>Qualifies real-estate enquiries on WhatsApp: budget, area and timeline. It scores each lead and drops hot buyers straight into the sales CRM.</p><div class="tg"><span>AI agent concept</span><span>WhatsApp</span><span>Lead scoring</span></div><a class="btn l" href="work/nestfinder.html" target="_blank" rel="noopener">Open demo ↗</a></div>
+        <div class="shot"><div class="mk mk-crm"><p><b>Meenal S.</b><em>92</em></p><span>Buy · ₹1–1.5 Cr · Whitefield</span><p><b>Arjun K.</b><em class="w">68</em></p><span>Buy · Sarjapur · 3–6 months</span></div><small>Real estate · WhatsApp · CRM</small><b>NestFinder</b></div>
+      </article>
+      <article class="card lt" style="--n:2" data-cur>
+        <div><span class="no">03 / Support agent</span><h3>Thread&amp;Co</h3><p>Customer support for a D2C fashion brand: tracks orders, starts returns and hands tricky cases to a human with the full context.</p><div class="tg"><span>AI agent concept</span><span>Order lookup</span><span>Human hand-off</span></div><a class="btn d" href="work/threadco.html" target="_blank" rel="noopener">Open demo ↗</a></div>
+        <div class="shot"><div class="mk mk-code"><p><s>›</s> get_order("TC-20418")</p><p class="r">← Out for delivery</p><p><s>›</s> create_return("TC-20377")</p><p class="r">← RMA-7731 · pickup tomorrow</p></div><small>E-commerce · Support · Returns</small><b>Thread&amp;Co</b></div>
+      </article>
+    </div>
+
+    <!-- Marketing -->
+    <div class="wk" id="w4">
+      <article class="card" style="--n:0" data-cur>
+        <div><span class="no">01 / Launch campaign</span><h3>Bloom Café</h3><p>A 30-day Instagram launch for a new café: feed design, Reels storyboards built around one-second hooks and a posting calendar that peaks on opening weekend.</p><div class="tg"><span>Campaign concept</span><span>Instagram</span><span>Reels</span></div><a class="btn l" href="work/bloom-cafe.html" target="_blank" rel="noopener">Open campaign ↗</a></div>
+        <div class="shot"><div class="mk mk-grid"><i style="background:linear-gradient(135deg,#ff6fa8,#ff9f43)"></i><i style="background:#2b1630"></i><i style="background:linear-gradient(160deg,#b9a3ff,#ffd3e4)"></i><i style="background:linear-gradient(135deg,#ff9f43,#ffd166)"></i><i style="background:#ff6fa8"></i><i style="background:#7bd389"></i></div><small>Café · Instagram · Content</small><b>Bloom Café</b></div>
+      </article>
+      <article class="card lt" style="--n:1" data-cur>
+        <div><span class="no">02 / Local SEO</span><h3>CareCure Physio</h3><p>A plan to win “physio near me”: Google Business profile, treatment pages, a review engine and a 90-day checklist the clinic can actually follow.</p><div class="tg"><span>SEO concept</span><span>Google Business</span><span>Reviews</span></div><a class="btn d" href="work/carecure-seo.html" target="_blank" rel="noopener">Open plan ↗</a></div>
+        <div class="shot"><div class="mk mk-serp"><p class="q">🔍 physiotherapist near me</p><p class="us"><b>CareCure Physio</b><span>4.8 ★★★★★ · 0.6 km</span></p><p><b>Align Physio Centre</b><span>4.3 ★★★★ · 1.2 km</span></p></div><small>Healthcare · Local search</small><b>CareCure Physio</b></div>
+      </article>
+      <article class="card" style="--n:2" data-cur>
+        <div><span class="no">03 / AI outreach</span><h3>Outreach Engine</h3><p>40 emails a day, each written by AI from the prospect's own trigger event, sent at human-looking intervals with deliverability built in.</p><div class="tg"><span>Live tool</span><span>Claude AI</span><span>Cold email</span></div><a class="btn l" href="work/outreach-engine.html" target="_blank" rel="noopener">Try the engine ↗</a></div>
+        <div class="shot"><div class="mk mk-mail"><p><b>To:</b> Priya · GreenLeaf</p><p class="m">Saw you launched delivery in 3 new cities. Congrats…</p><div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><small>B2B · Email · 40/day</small><b>Outreach Engine</b></div>
       </article>
     </div>
   </div>
 </section>
 
 <section id="build">
-  <div class="wrap"><span class="lab">(What we build)</span><h2 style="margin-bottom:70px">Four <em>territories.</em></h2></div>
+  <div class="wrap"><span class="lab">(What we build)</span><h2 style="margin-bottom:70px">Four <em>crafts.</em></h2></div>
   <div id="tr">
-    <div class="tr"><div class="wrap"><div class="trh"><i>01</i><h3>Portfolios</h3><span>One-page to multi-project personal sites</span></div></div><div class="trm"><div class="mq" style="border:0;padding:20px 0" data-mq="1"><div class="mt" data-t="One-page site|Case studies|Resume + LinkedIn|Mobile ready"></div></div></div></div>
-    <div class="tr"><div class="wrap"><div class="trh"><i>02</i><h3>Personal brand</h3><span>A full refresh, not just a website</span></div></div><div class="trm"><div class="mq" style="border:0;padding:20px 0" data-mq="1"><div class="mt" data-t="Resume optimization|LinkedIn profile|Professional bio|Branding"></div></div></div></div>
-    <div class="tr"><div class="wrap"><div class="trh"><i>03</i><h3>Business sites</h3><span>Shops, services and small teams</span></div></div><div class="trm"><div class="mq" style="border:0;padding:20px 0" data-mq="1"><div class="mt" data-t="Services showcase|WhatsApp links|Testimonials|Gallery"></div></div></div></div>
-    <div class="tr"><div class="wrap"><div class="trh"><i>04</i><h3>Launch &amp; reach</h3><span>Found, shared and set up properly</span></div></div><div class="trm"><div class="mq" style="border:0;padding:20px 0" data-mq="1"><div class="mt" data-t="SEO|Google Business profile|Custom domain|Email setup"></div></div></div></div>
+    <div class="tr"><div class="wrap"><div class="trh"><i>01</i><h3>Websites</h3><span>Portfolios to full business sites · from ₹999</span></div></div><div class="trm"><div class="mq" style="border:0;padding:20px 0" data-mq="1"><div class="mt" data-t="Portfolios|Business sites|Personal brand|SEO & domains"></div></div></div></div>
+    <div class="tr"><div class="wrap"><div class="trh"><i>02</i><h3>Custom apps</h3><span>Android, iOS &amp; web apps · from ₹24,999</span></div></div><div class="trm"><div class="mq" style="border:0;padding:20px 0" data-mq="1"><div class="mt" data-t="MVPs|Booking & ordering|UPI payments|Dashboards"></div></div></div></div>
+    <div class="tr"><div class="wrap"><div class="trh"><i>03</i><h3>AI agents</h3><span>Assistants that work 24/7 · from ₹9,999</span></div></div><div class="trm"><div class="mq" style="border:0;padding:20px 0" data-mq="1"><div class="mt" data-t="Website chat|WhatsApp agents|Lead capture|Appointment booking"></div></div></div></div>
+    <div class="tr"><div class="wrap"><div class="trh"><i>04</i><h3>Digital marketing</h3><span>Found, followed and chosen · from ₹7,999/mo</span></div></div><div class="trm"><div class="mq" style="border:0;padding:20px 0" data-mq="1"><div class="mt" data-t="Local SEO|Instagram & Reels|Meta & Google ads|AI outreach"></div></div></div></div>
   </div>
 </section>
 
-<div class="mq big" data-mq="1" style="padding:20px 0 90px"><div class="mt" data-t="Students|Creators|Freelancers|Small businesses"></div></div>
+<div class="mq big" data-mq="1" style="padding:20px 0 90px"><div class="mt" data-t="Creators|Founders|Startups|Small businesses"></div></div>
 
 <section class="light" id="pricing">
   <div class="wrap">
     <span class="lab">(Pricing)</span><h2>Priced to <em>start simple.</em></h2>
-    <div class="tabs" id="tabs"><span class="pill" id="pill"></span><button class="on" data-p="p1">Portfolios</button><button data-p="p2">Businesses</button></div>
-    <div class="plans on" id="p1">
-      <div class="plan"><h3>Basic</h3><div class="pr">₹999</div><p>A single-page portfolio that gets your work online fast.</p><ul><li>Single-page responsive portfolio</li><li>About, skills, education &amp; experience</li><li>Up to 3 projects</li><li>Certifications &amp; achievements</li><li>Resume + LinkedIn integration</li><li>1 revision</li><li>Basic SEO &amp; mobile optimization</li></ul><a class="btn" href="#contact" data-mag>Start my portfolio →</a></div>
-      <div class="plan hi"><h3>Professional</h3><div class="pr">₹1,999</div><p>A 3-page portfolio with sharper design and more room to tell your story.</p><ul><li>Everything in Basic</li><li>3-page website (Home, Projects, About)</li><li>3–5 project case studies</li><li>Better animations</li><li>Custom visual identity</li><li>More extensive content writing</li><li>2 revisions</li></ul><a class="btn l" href="#contact" data-mag>Go Professional →</a></div>
-      <div class="plan"><h3>Personal Brand</h3><div class="pr">₹3,999</div><p>Full optimization: a complete personal brand refresh, not just a website.</p><ul><li>Everything in Professional</li><li>Resume optimization</li><li>LinkedIn profile optimization</li><li>Personal branding</li><li>Professional bio</li><li>SEO optimization</li><li>Custom domain setup assistance</li></ul><a class="btn" href="#contact" data-mag>Build my brand →</a></div>
+    <div class="tabs" id="tabs"><span class="pill" id="pill"></span><button class="on" data-p="pw">Websites</button><button data-p="pa">Apps</button><button data-p="pi">AI Agents</button><button data-p="pm">Marketing</button></div>
+    <div class="pp on" id="pw">
+      <div class="subt" id="subt"><button class="on" data-s="p1">Portfolios</button><button data-s="p2">Business sites</button></div>
+      <div class="plans on" id="p1">
+      <div class="plan"><h3>Basic</h3><div class="pr">₹999</div><p>A single-page portfolio that gets your work online fast.</p><ul><li>Single-page responsive portfolio</li><li>About, skills, education &amp; experience</li><li>Up to 3 projects</li><li>Certifications &amp; achievements</li><li>Resume + LinkedIn integration</li><li>1 revision</li><li>Basic SEO &amp; mobile optimization</li></ul><a class="btn" href="#quote" data-xq="web:0" data-mag>Start my portfolio →</a></div>
+      <div class="plan hi"><h3>Professional</h3><div class="pr">₹1,999</div><p>A 3-page portfolio with sharper design and more room to tell your story.</p><ul><li>Everything in Basic</li><li>3-page website (Home, Projects, About)</li><li>3–5 project case studies</li><li>Better animations</li><li>Custom visual identity</li><li>More extensive content writing</li><li>2 revisions</li></ul><a class="btn l" href="#quote" data-xq="web:1" data-mag>Go Professional →</a></div>
+      <div class="plan"><h3>Personal Brand</h3><div class="pr">₹3,999</div><p>Full optimization: a complete personal brand refresh, not just a website.</p><ul><li>Everything in Professional</li><li>Resume optimization</li><li>LinkedIn profile optimization</li><li>Personal branding</li><li>Professional bio</li><li>SEO optimization</li><li>Custom domain setup assistance</li></ul><a class="btn" href="#quote" data-xq="web:2" data-mag>Build my brand →</a></div>
+      </div>
+      <div class="plans" id="p2">
+      <div class="plan"><h3>Starter</h3><div class="pr">₹5,000</div><p>A single-page site that puts your business online.</p><ul><li>Single-page responsive website</li><li>Services &amp; offerings section</li><li>About &amp; contact details</li><li>WhatsApp &amp; social links</li><li>1 revision</li><li>Basic SEO &amp; mobile optimization</li></ul><a class="btn" href="#quote" data-xq="web:3" data-mag>Start my site →</a></div>
+      <div class="plan hi"><h3>Growth</h3><div class="pr">₹9,999</div><p>A multi-page site with room to show more of your business.</p><ul><li>Everything in Starter</li><li>Up to 5 pages</li><li>Product / service showcase</li><li>Custom visual identity</li><li>Testimonials &amp; gallery section</li><li>Content writing for all pages</li><li>2 revisions</li></ul><a class="btn l" href="#quote" data-xq="web:4" data-mag>Go Growth →</a></div>
+      <div class="plan"><h3>Complete Brand</h3><div class="pr">₹17,999</div><p>A full website with digital marketing to bring customers in.</p><ul><li>Everything in Growth</li><li>Full multi-page website</li><li>Digital marketing setup &amp; strategy</li><li>Social media setup &amp; content</li><li>Google Business profile setup</li><li>SEO optimization</li><li>Custom domain &amp; email setup assistance</li><li>3 revisions</li></ul><a class="btn" href="#quote" data-xq="web:5" data-mag>Build our site →</a></div>
+      </div>
     </div>
-    <div class="plans" id="p2">
-      <div class="plan"><h3>Starter</h3><div class="pr">₹5,000</div><p>A single-page site that puts your business online.</p><ul><li>Single-page responsive website</li><li>Services &amp; offerings section</li><li>About &amp; contact details</li><li>WhatsApp &amp; social links</li><li>1 revision</li><li>Basic SEO &amp; mobile optimization</li></ul><a class="btn" href="#contact" data-mag>Start my site →</a></div>
-      <div class="plan hi"><h3>Growth</h3><div class="pr">₹9,999</div><p>A multi-page site with room to show more of your business.</p><ul><li>Everything in Starter</li><li>Up to 5 pages</li><li>Product / service showcase</li><li>Custom visual identity</li><li>Testimonials &amp; gallery section</li><li>Content writing for all pages</li><li>2 revisions</li></ul><a class="btn l" href="#contact" data-mag>Go Growth →</a></div>
-      <div class="plan"><h3>Complete Brand</h3><div class="pr">₹17,999</div><p>A full website with digital marketing to bring customers in.</p><ul><li>Everything in Growth</li><li>Full multi-page website</li><li>Digital marketing setup &amp; strategy</li><li>Social media setup &amp; content</li><li>Google Business profile setup</li><li>SEO optimization</li><li>Custom domain &amp; email setup assistance</li><li>3 revisions</li></ul><a class="btn" href="#contact" data-mag>Build our site →</a></div>
+    <div class="pp" id="pa"><div class="plans on">
+      <div class="plan"><h3>Starter</h3><div class="pr">₹24,999</div><p>An MVP to test your idea with real users.</p><ul><li>Web app or Android app</li><li>Up to 6 core screens</li><li>Login + database</li><li>Basic admin panel</li><li>2 revisions</li><li>30 days support</li></ul><a class="btn" href="#quote" data-xq="app:0" data-mag>Start my MVP →</a></div>
+      <div class="plan hi"><h3>Growth</h3><div class="pr">₹59,999</div><p>A launch-ready product your customers will use daily.</p><ul><li>Everything in Starter</li><li>Web + Android</li><li>Up to 15 screens</li><li>UPI / Razorpay payments</li><li>Push notifications &amp; analytics</li><li>60 days support</li></ul><a class="btn l" href="#quote" data-xq="app:1" data-mag>Go Growth →</a></div>
+      <div class="plan"><h3>Best-in-Market</h3><div class="pr"><small>from </small>₹1,49,999</div><p>Built to scale, with every platform covered.</p><ul><li>Web, Android &amp; iOS</li><li>Custom APIs &amp; integrations</li><li>Role-based dashboards</li><li>Security review &amp; load testing</li><li>Store launch included</li><li>90 days priority support</li></ul><a class="btn" href="#quote" data-xq="app:2" data-mag>Build at scale →</a></div>
+    </div></div>
+    <div class="pp" id="pi"><div class="plans on">
+      <div class="plan"><h3>Starter</h3><div class="pr">₹9,999</div><div class="pm">+ ₹999/month hosting &amp; care</div><p>One AI assistant doing one job really well.</p><ul><li>1 AI chat assistant</li><li>Trained on your services &amp; FAQs</li><li>Website chat widget</li><li>Leads sent to email / Google Sheets</li><li>Monthly tuning</li></ul><a class="btn" href="#quote" data-xq="ai:0" data-mag>Get my assistant →</a></div>
+      <div class="plan hi"><h3>Growth</h3><div class="pr">₹29,999</div><div class="pm">+ ₹2,499/month</div><p>AI working across your whole sales funnel.</p><ul><li>Everything in Starter</li><li>Up to 3 agents (support, sales, booking)</li><li>Website + WhatsApp</li><li>CRM &amp; calendar booking</li><li>Hand-off to a human</li><li>Monthly performance report</li></ul><a class="btn l" href="#quote" data-xq="ai:1" data-mag>Go Growth →</a></div>
+      <div class="plan"><h3>Best-in-Market</h3><div class="pr">₹74,999</div><div class="pm">+ ₹5,999/month</div><p>Your AI operations team, connected to everything.</p><ul><li>Multi-agent workflows</li><li>Custom tools on your own data</li><li>Voice / phone agent option</li><li>Zapier / Make automations</li><li>Audit logs &amp; priority support</li></ul><a class="btn" href="#quote" data-xq="ai:2" data-mag>Automate it all →</a></div>
+    </div></div>
+    <div class="pp" id="pm"><div class="plans on">
+      <div class="plan"><h3>Starter</h3><div class="pr">₹7,999<small>/mo</small></div><p>Get found by customers searching nearby.</p><ul><li>Google Business profile</li><li>On-page &amp; local SEO</li><li>8 social posts / month</li><li>Monthly report</li></ul><a class="btn" href="#quote" data-xq="mkt:0" data-mag>Get found →</a></div>
+      <div class="plan hi"><h3>Growth</h3><div class="pr">₹17,999<small>/mo</small></div><p>A predictable flow of new enquiries.</p><ul><li>Everything in Starter</li><li>Meta or Google ads management</li><li>12 posts + 4 Reels / month</li><li>Landing page optimisation</li><li>AI-personalised outreach (40/day)</li><li>Bi-weekly calls</li></ul><a class="btn l" href="#quote" data-xq="mkt:1" data-mag>Go Growth →</a></div>
+      <div class="plan"><h3>Best-in-Market</h3><div class="pr">₹39,999<small>/mo</small></div><p>A full-funnel growth team on your side.</p><ul><li>Multi-channel ads</li><li>Technical SEO &amp; content</li><li>Email &amp; WhatsApp campaigns</li><li>Creative &amp; video production</li><li>Weekly strategy calls</li></ul><a class="btn" href="#quote" data-xq="mkt:2" data-mag>Scale up →</a></div>
+    </div><p class="xnote">Ad spend is paid directly to Google / Meta and is not included.</p></div>
+    <p class="xnote">All prices exclude GST where applicable. Every project starts with a free 15-minute call and a fixed quote.</p>
+  </div>
+</section>
+
+<!-- ===== [Forge add-on] Quote builder ===== -->
+<section id="quote">
+  <div class="wrap">
+    <span class="lab">(Instant estimate)</span><h2>Build your <em>package.</em></h2>
+    <div class="xq">
+      <div id="xq-list"></div>
+      <aside class="xq-sum" aria-live="polite">
+        <span class="lab">(Your estimate)</span>
+        <ul class="xq-lines" id="xq-lines"></ul>
+        <div class="xq-tot" id="xq-tot">₹0</div>
+        <div class="xq-mo" id="xq-mo"></div>
+        <div class="xq-speed" role="radiogroup" aria-label="Delivery speed">
+          <label><input type="radio" name="xq-speed" value="std" checked><span>Standard</span></label>
+          <label><input type="radio" name="xq-speed" value="fast"><span>Express +25%</span></label>
+        </div>
+        <form class="xq-f" id="xq-f" novalidate>
+          <input name="name" placeholder="Your name" autocomplete="name" aria-label="Your name">
+          <input name="contact" placeholder="Phone or email" autocomplete="email" aria-label="Phone or email">
+          <textarea name="note" placeholder="Anything we should know? (optional)" aria-label="Notes"></textarea>
+          <div class="xq-err" id="xq-err" role="alert"></div>
+          <button class="btn d" type="submit">Send on WhatsApp →</button>
+          <button class="btn gh" type="button" id="xq-mail">Email it instead</button>
+        </form>
+        <p class="xq-note">Estimates only. You get a fixed quote after a free 15-minute call.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== [Forge add-on] FAQ ===== -->
+<section class="light" id="faq">
+  <div class="wrap">
+    <span class="lab">(Good questions)</span><h2>Before you <em>ask.</em></h2>
+    <div class="xf">
+      <details><summary>What do I need to send to get started?</summary><p>For a portfolio: your resume, a photo, your projects and achievements. For a business site: your services, photos, contact details and any logo you have. For an app or AI agent: a short description of the idea, or the questions your customers ask most. We structure everything else.</p></details>
+      <details><summary>How long will it take?</summary><p>It depends on the package. You get a clear delivery date with your quote before you pay anything. Need it sooner? Pick Express in the quote builder.</p></details>
+      <details><summary>What can an AI agent actually do for my business?</summary><p>Answer common customer questions instantly, collect leads, book appointments and pass serious enquiries to you on WhatsApp, day and night. The Forge AI assistant on this page is a live example: <a href="#" data-chat>try it</a>.</p></details>
+      <details><summary>Do you build apps for Android and iPhone?</summary><p>Yes. Starter covers one platform (web or Android), Growth adds a second, and Best-in-Market covers web, Android and iOS, including store submission.</p></details>
+      <details><summary>Is ad spend included in the marketing plans?</summary><p>No. Ad budgets are paid directly to Google or Meta, so you always control how much you spend. Our fee covers strategy, creatives, setup and management.</p></details>
+      <details><summary>Can I combine services?</summary><p>Yes, most clients do. Build a combined package in the <a href="#quote">quote builder</a>, then send it to us on WhatsApp and we will reply with a fixed price.</p></details>
     </div>
   </div>
 </section>
@@ -249,10 +566,10 @@ footer a{color:#fff}
   <div class="wrap">
     <span class="lab">(The process)</span><h2>From raw material to <em>ready to share.</em></h2>
     <div class="steps" id="steps">
-      <div class="step"><b>1</b><h3>Send your story</h3><p>Resume, photo, projects and achievements, or your business’s services, photos and details.</p></div>
-      <div class="step"><b>2</b><h3>We structure it</h3><p>Your raw information becomes clear, credible content.</p></div>
-      <div class="step"><b>3</b><h3>We build it</h3><p>Layout, visual hierarchy, responsive design and polish.</p></div>
-      <div class="step"><b>4</b><h3>You share it</h3><p>One professional link for your resume, LinkedIn, applications or storefront.</p></div>
+      <div class="step"><b>1</b><h3>Tell us the goal</h3><p>A resume, a business, an app idea or a growth target. Send what you have, however rough.</p></div>
+      <div class="step"><b>2</b><h3>We plan it</h3><p>Scope, design direction and a fixed quote with a clear delivery date.</p></div>
+      <div class="step"><b>3</b><h3>We build it</h3><p>Design, code, AI training or campaigns, built, tested and polished.</p></div>
+      <div class="step"><b>4</b><h3>You launch &amp; grow</h3><p>A site, an app, an assistant or a plan that keeps working after handover.</p></div>
     </div>
   </div>
 </section>
@@ -261,26 +578,26 @@ footer a{color:#fff}
   <div class="wrap">
     <span class="lab">(Ready when you are)</span>
     <h2>Let’s <em>forge</em> it.</h2>
-    <p>Tell us what you do, or what your business does, and we’ll help turn it into a site people remember.</p>
+    <p>A portfolio, an app, an AI assistant or a growth plan. Tell us what you’re building and we’ll forge it into something people remember.</p>
     <div class="cg">
       <a class="ci" href="https://wa.me/918637409160" target="_blank" rel="noopener"><i>W</i><span><b>WhatsApp</b>+91 86374 09160</span></a>
       <a class="ci" href="mailto:anandamsachin@gmail.com"><i>@</i><span><b>Email</b>anandamsachin@gmail.com</span></a>
       <a class="ci" href="https://www.linkedin.com/in/sachidanandam-r-63061822b/" target="_blank" rel="noopener"><i>in</i><span><b>LinkedIn</b>Sachidanandam R</span></a>
       <a class="ci" href="https://www.instagram.com/s_x_c_x_i_x?stkn=MW54cWY3Ynl6MHZocg==" target="_blank" rel="noopener"><i>IG</i><span><b>Instagram</b>@s_x_c_x_i_x</span></a>
     </div>
-    <a class="btn l" href="mailto:anandamsachin@gmail.com?subject=I%20want%20a%20%E2%82%B9999%20portfolio" data-mag>Start with ₹999 →</a>
+    <div class="acts" style="justify-content:center"><a class="btn l" href="#quote" data-mag>Get an instant quote →</a><a class="btn" href="#" data-chat data-mag>Ask Forge AI</a></div>
   </div>
 </section>
 </main>
 
-<div class="wrap"><footer><span>© 2026 Forge. Built to make your work visible.</span><span>Personal portfolios · Business websites · Professional presence</span><a href="#home">Back to top ↑</a></footer></div>
+<div class="wrap"><footer><span>© 2026 Forge. Built to make your work visible.</span><span>Websites · Custom apps · AI agents · Digital marketing</span><a href="#home">Back to top ↑</a></footer></div>
 
 <script>
 (function(){
 var D=document,$=function(s,c){return(c||D).querySelector(s)},$$=function(s,c){return[].slice.call((c||D).querySelectorAll(s))};
 var RM=matchMedia("(prefers-reduced-motion:reduce)").matches,vh=innerHeight,vel=0,lastY=scrollY;
 // marquees: build content, then drift with scroll velocity
-var base="Portfolios|Business websites|Personal brand|Fast turnaround|Mobile ready|SEO basics".split("|");
+var base="Websites|Custom apps|AI agents|Digital marketing|Fast turnaround|Made in India".split("|");
 $$(".mt").forEach(function(m){var t=m.dataset.t?m.dataset.t.split("|"):base,h="";for(var k=0;k<3;k++)t.forEach(function(x,i){h+="<span>"+x+"</span><span>*</span>"});m.innerHTML=h;m.x=0;m.dir=1;});
 var mts=$$(".mt");
 // loader
@@ -301,7 +618,7 @@ function frame(){
   if(star)star.style.transform="rotate("+(y*.25)+"deg)";
   var r=man.getBoundingClientRect(),p=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height+vh*.35)));
   ws.forEach(function(w,i){w.classList.toggle("on",RM||i/ws.length<p*1.05)});
-  if(!RM&&innerWidth>600){cards.forEach(function(c,i){var nx=cards[i+1];if(!nx)return;var t=nx.getBoundingClientRect().top,s=1-Math.min(1,Math.max(0,(vh-t)/vh))*.07;c.style.transform="scale("+s+")"})}
+  if(!RM&&innerWidth>600){cards=$$(".wk.on .card");cards.forEach(function(c,i){var nx=cards[i+1];if(!nx)return;var t=nx.getBoundingClientRect().top,s=1-Math.min(1,Math.max(0,(vh-t)/vh))*.07;c.style.transform="scale("+s+")"})}
   if(!RM)mts.forEach(function(m,i){var host=m.parentNode;var half=m.scrollWidth/3;m.x-=(1.2+Math.abs(vel)*.5)*(i%2?-1:1)*.6;if(m.x<=-half)m.x+=half;if(m.x>0)m.x-=half;m.style.transform="translateX("+m.x+"px)"});
   requestAnimationFrame(frame)}
 requestAnimationFrame(frame);
@@ -324,11 +641,187 @@ $$("a",menu).forEach(function(a){a.onclick=function(){tog(false)}});
 addEventListener("keydown",function(e){if(e.key==="Escape")tog(false)});
 // territory rows
 $$(".tr").forEach(function(t){t.addEventListener("mouseenter",function(){$$(".tr.on").forEach(function(o){o.classList.remove("on")});t.classList.add("on")});t.addEventListener("click",function(){t.classList.toggle("on")});t.addEventListener("mouseleave",function(){t.classList.remove("on")})});
-// pricing tabs
-var tb=$$("#tabs button"),pill=$("#pill");
-function place(b){pill.style.width=b.offsetWidth+"px";pill.style.transform="translateX("+(b.offsetLeft-5)+"px)"}
-tb.forEach(function(b){b.onclick=function(){tb.forEach(function(x){x.classList.toggle("on",x===b)});$$(".plans").forEach(function(p){p.classList.toggle("on",p.id===b.dataset.p)});place(b)}});
-addEventListener("load",function(){place($("#tabs .on"))});addEventListener("resize",function(){place($("#tabs .on"))});
+// tab bars (pricing: 4 services, work: 4 crafts) share one sliding-pill helper
+function place(pill,b){pill.style.width=b.offsetWidth+"px";pill.style.transform="translateX("+(b.offsetLeft-5)+"px)"}
+function tabs(bar,pill,key,panels){var tb=$$("button",bar);
+  function go(b){tb.forEach(function(x){x.classList.toggle("on",x===b)});$$(panels).forEach(function(p){p.classList.toggle("on",p.id===b.dataset[key])});place(pill,b);
+    $$(".card").forEach(function(c){c.style.transform=""})}
+  tb.forEach(function(b){b.onclick=function(){go(b)}});
+  function fix(){place(pill,$(".on",bar))}addEventListener("load",fix);addEventListener("resize",fix);if(D.fonts)D.fonts.ready.then(fix);
+  return function(id){var b=$('[data-'+key+'="'+id+'"]',bar);if(b)go(b)}}
+var showPrice=tabs($("#tabs"),$("#pill"),"p",".pp");
+tabs($("#wtabs"),$("#wpill"),"w",".wk");
+// website sub-switch: Portfolios / Business sites
+$$("#subt button").forEach(function(b){b.onclick=function(){$$("#subt button").forEach(function(x){x.classList.toggle("on",x===b)});$$("#pw .plans").forEach(function(p){p.classList.toggle("on",p.id===b.dataset.s)})}});
+// hero service links open the matching pricing tab
+$$("[data-pt]").forEach(function(a){a.addEventListener("click",function(){showPrice(a.dataset.pt)})});
+})();
+</script>
+
+<!-- ===== [Forge add-on] Forge AI chat assistant ===== -->
+<div class="fa" id="fa" role="dialog" aria-label="Forge AI assistant" aria-modal="false">
+  <div class="fa-h">
+    <span class="fa-av"><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M50 0l9 34 31-17-17 31 34 9-34 9 17 31-31-17-9 34-9-34-31 17 17-31-34-9 34-9-17-31 31 17z"/></svg></span>
+    <span><b>Forge AI</b><small>Online · replies instantly</small></span>
+    <button class="fa-x" id="fa-x" aria-label="Close chat">×</button>
+  </div>
+  <div class="fa-log" id="fa-log" aria-live="polite"></div>
+  <div class="fa-q" id="fa-q"></div>
+  <form class="fa-f" id="fa-f"><input id="fa-in" placeholder="Ask about prices, apps, AI…" autocomplete="off" maxlength="600" aria-label="Your message"><button id="fa-send" aria-label="Send"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form>
+  <div class="fa-foot">AI assistant · for anything important, confirm with us on WhatsApp</div>
+</div>
+<button class="fa-tip" id="fa-tip" type="button">Need a price? Ask Forge AI, it answers in seconds.</button>
+<button class="fa-btn" id="fa-btn" aria-label="Open Forge AI chat" aria-expanded="false" aria-controls="fa"><svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M50 0l9 34 31-17-17 31 34 9-34 9 17 31-31-17-9 34-9-34-31 17 17-31-34-9 34-9-17-31 31 17z"/></svg><span class="dot" id="fa-dot"></span></button>
+
+<script>
+/* ===== [Forge add-on] extra pricing tabs, quote builder, Forge AI chat ===== */
+(function(){
+var D=document,$=function(s,c){return(c||D).querySelector(s)},$$=function(s,c){return[].slice.call((c||D).querySelectorAll(s))};
+var WA="918637409160",MAIL="anandamsachin@gmail.com";
+// Chat backend (see netlify/functions/chat.mjs). If it is missing or fails, the
+// assistant falls back to the built-in answers below, so the site works on any host.
+var CHAT_ENDPOINT="/api/chat";
+var inr=new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0});
+var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+var price=function(one,mo){return[one?inr.format(one):"",mo?inr.format(mo)+"/mo":""].filter(Boolean).join(" + ")};
+
+/* ---------- quote builder: [name, one-time ₹, monthly ₹] ---------- */
+var Q=[
+  {id:"web",name:"Websites",def:0,
+   tiers:[["Portfolio Basic",999,0],["Portfolio Pro",1999,0],["Personal Brand",3999,0],["Business Starter",5000,0],["Business Growth",9999,0],["Complete Brand",17999,0]],
+   add:[["Domain + email setup",1499,0],["AI chat assistant on your site",4999,499],["Care plan",0,499]]},
+  {id:"app",name:"Custom apps",def:1,
+   tiers:[["Starter",24999,0],["Growth",59999,0],["Best-in-Market",149999,0]],
+   add:[["UI/UX design system",9999,0],["Store launch",4999,0],["Maintenance",0,2999]]},
+  {id:"ai",name:"AI agents",def:1,
+   tiers:[["Starter",9999,999],["Growth",29999,2499],["Best-in-Market",74999,5999]],
+   add:[["WhatsApp channel",4999,0],["Voice / call agent",14999,1499],["Team training",2999,0]]},
+  {id:"mkt",name:"Digital marketing",def:1,
+   tiers:[["Starter",0,7999],["Growth",0,17999],["Best-in-Market",0,39999]],
+   add:[["Social media management",0,5999],["4 Reels a month",0,4999],["One-time audit",1999,0]]}
+];
+$("#xq-list").innerHTML=Q.map(function(s,i){
+  return '<div class="xq-svc" data-id="'+s.id+'"><button type="button" class="xq-head" aria-expanded="false"><i>0'+(i+1)+'</i><h3>'+s.name+'</h3><span class="xq-tog" aria-hidden="true">+</span></button>'+
+    '<div class="xq-body"><span class="xq-lab">Package</span><div class="xq-chips" role="radiogroup" aria-label="'+s.name+' package">'+
+    s.tiers.map(function(t,j){return '<label class="xq-chip"><input type="radio" name="xq-'+s.id+'" value="'+j+'"'+(j===s.def?" checked":"")+'><span>'+t[0]+' <small>'+price(t[1],t[2])+'</small></span></label>'}).join("")+
+    '</div><span class="xq-lab">Add-ons</span><div class="xq-chips">'+
+    s.add.map(function(a,j){return '<label class="xq-chip"><input type="checkbox" data-a="'+j+'"><span>'+a[0]+' <small>'+price(a[1],a[2])+'</small></span></label>'}).join("")+
+    '</div></div></div>'}).join("");
+function setOn(el,on){el.classList.toggle("on",on);$(".xq-head",el).setAttribute("aria-expanded",on)}
+$$(".xq-svc").forEach(function(el){$(".xq-head",el).onclick=function(){setOn(el,!el.classList.contains("on"));calc()}});
+
+var last;
+function calc(){
+  var fast=$('input[name="xq-speed"]:checked').value==="fast",lines=[],one=0,mo=0;
+  Q.forEach(function(s){
+    var el=$('.xq-svc[data-id="'+s.id+'"]');if(!el.classList.contains("on"))return;
+    var t=s.tiers[+$('input[name="xq-'+s.id+'"]:checked',el).value],o=t[1],m=t[2],ad=[];
+    $$("input[data-a]:checked",el).forEach(function(c){var a=s.add[+c.dataset.a];o+=a[1];m+=a[2];ad.push(a[0])});
+    one+=o;mo+=m;lines.push({svc:s.name,tier:t[0],one:o,mo:m,add:ad});
+  });
+  if(fast)one=Math.round(one*1.25);
+  last={lines:lines,one:one,mo:mo,fast:fast};
+  $("#xq-lines").innerHTML=lines.length?lines.map(function(l){
+    return "<li><span>"+l.svc+" · "+l.tier+(l.add.length?" +"+l.add.length+" add-on"+(l.add.length>1?"s":""):"")+"</span><span>"+price(l.one,l.mo)+"</span></li>"}).join("")
+    :'<li class="empty">Tap a service on the left to start.</li>';
+  if(one){$("#xq-tot").textContent=inr.format(one);$("#xq-mo").textContent="one-time"+(fast?" (express)":"")+(mo?" · + "+inr.format(mo)+"/month ongoing":"")}
+  else if(mo){$("#xq-tot").textContent=inr.format(mo)+"/mo";$("#xq-mo").textContent="monthly plan"}
+  else{$("#xq-tot").textContent="₹0";$("#xq-mo").textContent=""}
+}
+$("#quote").addEventListener("change",calc);
+calc();
+
+function pick(id,tier){
+  var el=$('.xq-svc[data-id="'+id+'"]');if(!el)return;setOn(el,true);
+  if(tier!=null&&tier!==""){var r=$('input[name="xq-'+id+'"][value="'+tier+'"]');if(r)r.checked=true}
+  calc();$("#quote").scrollIntoView({behavior:"smooth"});
+}
+function quoteText(f){
+  var t="Hi Forge! I'd like a quote.\n\nName: "+f.name.value.trim()+"\nContact: "+f.contact.value.trim()+"\n\n";
+  last.lines.forEach(function(l){t+="• "+l.svc+": "+l.tier+(l.add.length?" (+ "+l.add.join(", ")+")":"")+" = "+price(l.one,l.mo)+"\n"});
+  t+="\nDelivery: "+(last.fast?"Express":"Standard")+"\nEstimate: "+[last.one?inr.format(last.one)+" one-time":"",last.mo?inr.format(last.mo)+"/month":""].filter(Boolean).join(" + ");
+  if(f.note.value.trim())t+="\n\nNotes: "+f.note.value.trim();
+  return t;
+}
+function check(f){
+  var e=$("#xq-err");e.textContent="";
+  if(!last.lines.length){e.textContent="Pick at least one service first.";return false}
+  if(!f.name.value.trim()||!f.contact.value.trim()){e.textContent="Add your name and a phone number or email.";return false}
+  return true;
+}
+$("#xq-f").addEventListener("submit",function(ev){ev.preventDefault();var f=ev.target;if(!check(f))return;
+  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(quoteText(f)),"_blank","noopener")});
+$("#xq-mail").onclick=function(){var f=$("#xq-f");if(!check(f))return;
+  location.href="mailto:"+MAIL+"?subject="+encodeURIComponent("Quote request – "+f.name.value.trim())+"&body="+encodeURIComponent(quoteText(f))};
+
+/* ---------- Forge AI chat ---------- */
+var fa=$("#fa"),log=$("#fa-log"),inp=$("#fa-in"),sendB=$("#fa-send"),fbtn=$("#fa-btn"),tip=$("#fa-tip");
+var hist=[],busy=false,greeted=false,remote=!!CHAT_ENDPOINT&&location.protocol.indexOf("http")===0;
+var waLink='<a href="https://wa.me/'+WA+'" target="_blank" rel="noopener">WhatsApp</a>';
+var KB=[ // offline answers, checked top to bottom
+  [/\b(human|person|call|contact|whats ?app|phone|email|talk to|sachin|owner)\b/i,"You can reach the team directly on "+waLink+" (+91 86374 09160) or by <a href=\"mailto:"+MAIL+"\">email</a>. Share what you need and you'll get a reply soon."],
+  [/quote|estimate|calculat|package|combine/i,"The <a href=\"#quote\">quote builder</a> gives you an instant estimate. Pick services and add-ons, then send it to us on WhatsApp in one tap."],
+  [/\bapps?\b|android|ios|iphone|mobile app|application|play ?store/i,"We build custom web and mobile apps:<br>• <b>Starter</b> ₹24,999: MVP, 1 platform<br>• <b>Growth</b> ₹59,999: web + Android, UPI payments<br>• <b>Best-in-Market</b> from ₹1,49,999: web, Android &amp; iOS<br><a href=\"#pricing\">See full app plans</a>"],
+  [/\bai\b|agent|chat ?bot|\bbot\b|automat|assistant|gpt|claude/i,"AI agents answer customers, capture leads and book appointments 24/7 on your website or WhatsApp. I'm one!<br>• <b>Starter</b> ₹9,999 + ₹999/mo<br>• <b>Growth</b> ₹29,999 + ₹2,499/mo<br>• <b>Best-in-Market</b> ₹74,999 + ₹5,999/mo"],
+  [/market|seo|\bads?\b|instagram|social|reels?|google business|leads?|customers|grow/i,"Monthly marketing plans:<br>• <b>Starter</b> ₹7,999/mo: Google profile, local SEO, posts<br>• <b>Growth</b> ₹17,999/mo: + ads, Reels, outreach<br>• <b>Best-in-Market</b> ₹39,999/mo: full funnel<br>Ad spend is paid separately to Google/Meta."],
+  [/portfolio|resume|\bcv\b|student|fresher|linkedin|personal/i,"Portfolios:<br>• <b>Basic</b> ₹999: single page, up to 3 projects<br>• <b>Professional</b> ₹1,999: 3 pages, case studies<br>• <b>Personal Brand</b> ₹3,999: + resume &amp; LinkedIn optimisation<br><a href=\"#pricing\">See portfolio plans</a>"],
+  [/business|shop|store|restaurant|clinic|website|\bsite\b|landing/i,"Business websites:<br>• <b>Starter</b> ₹5,000: single page<br>• <b>Growth</b> ₹9,999: up to 5 pages, gallery, testimonials<br>• <b>Complete Brand</b> ₹17,999: full site + marketing setup"],
+  [/price|cost|pric|rate|charge|how much|budget|₹|\brs\b|rupee|fee|cheap/i,"Quick price guide:<br>• Portfolios from ₹999<br>• Business sites from ₹5,000<br>• AI agents from ₹9,999<br>• Apps from ₹24,999<br>• Marketing from ₹7,999/mo<br>For an exact figure, try the <a href=\"#quote\">quote builder</a>."],
+  [/time|how long|days?|weeks?|deliver|fast|urgent|deadline|when/i,"It depends on the package. You'll get a clear delivery date with your quote before paying anything. In a hurry? Choose <b>Express</b> (+25%) in the <a href=\"#quote\">quote builder</a>."],
+  [/need|send|require|process|start|steps|how (do|does)/i,"It's 4 steps: 1) send your story (resume and projects, or your business details), 2) we structure it, 3) we build it, 4) you share one professional link. <a href=\"#process\">See the process</a>"],
+  [/^(hi+|hello|hey|namaste|vanakkam|yo|good (morning|evening|afternoon))\b/i,"Hey! What are you looking for: a portfolio, a business website, an app, an AI agent or marketing?"],
+  [/thank|thanks|great|cool|awesome|ok(ay)?\b/i,"Happy to help! When you're ready, send your details on "+waLink+" or use the <a href=\"#quote\">quote builder</a>."]
+];
+function local(t){for(var i=0;i<KB.length;i++)if(KB[i][0].test(t))return KB[i][1];
+  return "I'm not sure I can answer that one well here. The team can help on "+waLink+", or ask me about prices, portfolios, apps, AI agents or marketing."}
+function fmt(t){return esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>').replace(/\n/g,"<br>")}
+function plain(h){return h.replace(/<br>/g,"\n").replace(/<[^>]+>/g,"").replace(/&amp;/g,"&")}
+function add(cls,html){var d=D.createElement("div");d.className="fa-m "+cls;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+
+function openChat(o){
+  fa.classList.toggle("open",o);fbtn.setAttribute("aria-expanded",o);tip.classList.remove("show");
+  if(!o)return;
+  $("#fa-dot").style.display="none";
+  try{sessionStorage.setItem("fa-seen","1")}catch(e){}
+  if(!greeted){greeted=true;add("b","Hi! I'm <b>Forge AI</b>. Ask me about websites, apps, AI agents or marketing, or get a price in seconds.")}
+  setTimeout(function(){inp.focus()},350);
+}
+fbtn.onclick=function(){openChat(!fa.classList.contains("open"))};
+tip.onclick=function(){openChat(true)};
+$("#fa-x").onclick=function(){openChat(false);fbtn.focus()};
+addEventListener("keydown",function(e){if(e.key==="Escape"&&fa.classList.contains("open"))openChat(false)});
+log.addEventListener("click",function(e){var a=e.target.closest('a[href^="#"]');if(a&&innerWidth<=600)openChat(false)});
+
+["Prices","Portfolio","AI agents","Apps","Marketing","Get a quote","Talk to a human"].forEach(function(q){
+  var b=D.createElement("button");b.type="button";b.textContent=q;b.onclick=function(){send(q)};$("#fa-q").appendChild(b)});
+
+function send(text){
+  text=(text||"").trim();if(!text||busy)return;
+  inp.value="";add("u",esc(text));hist.push({role:"user",content:text});
+  busy=true;sendB.disabled=true;
+  var typing=add("b",'<span class="fa-typ"><i></i><i></i><i></i></span>');
+  function done(html,raw){typing.remove();add("b",html);hist.push({role:"assistant",content:raw});busy=false;sendB.disabled=false}
+  function offline(){var a=local(text);done(a,plain(a))}
+  if(!remote){setTimeout(offline,450+Math.random()*400);return}
+  var ctl=window.AbortController?new AbortController():null,to=setTimeout(function(){ctl&&ctl.abort()},25000);
+  fetch(CHAT_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:hist.slice(-11)}),signal:ctl&&ctl.signal})
+    .then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
+    .then(function(j){if(!j||!j.reply)throw new Error("empty");done(fmt(j.reply),j.reply)})
+    .catch(function(){remote=false;offline()})   // no backend / error: switch to offline answers
+    .then(function(){clearTimeout(to)});
+}
+$("#fa-f").addEventListener("submit",function(e){e.preventDefault();send(inp.value)});
+
+// gentle nudge once per visit
+var seen=false;try{seen=sessionStorage.getItem("fa-seen")==="1"}catch(e){}
+if(seen)$("#fa-dot").style.display="none";
+else setTimeout(function(){if(!fa.classList.contains("open"))tip.classList.add("show");setTimeout(function(){tip.classList.remove("show")},9000)},15000);
+
+/* ---------- shared hooks: [data-xq="service:tier"] opens the quote builder, [data-chat] opens the chat ---------- */
+D.addEventListener("click",function(e){
+  var q=e.target.closest("[data-xq]");if(q){e.preventDefault();var p=q.dataset.xq.split(":");pick(p[0],p[1]);return}
+  var c=e.target.closest("[data-chat]");if(c){e.preventDefault();openChat(true)}
+});
 })();
 </script>
 </body>
